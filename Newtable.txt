@@ -1,0 +1,33 @@
+npmovies = np.genfromtxt('u.item',delimiter='|',dtype=str)
+
+npuser = np.genfromtxt('u.user',delimiter='|',dtype=str)
+
+npratings = np.genfromtxt('u.data',delimiter='',dtype=str)
+
+def ratelist(rate,mv,usr):
+    newlist =[]
+    uslist=[]
+    datalist= np.zeros((len(usr), len(mv)))
+    
+    
+    
+    
+    for i in range(len(datalist)):
+        for l in range(len(rate)):
+            if int(rate[l][0])  not in newlist:
+                datalist[i][0] = rate[l][0]
+            
+                newlist.append(rate[l][0])
+            else:
+                continue
+                
+            for j in range(l,len(rate)):
+                if int(rate[j][0])==int(rate[l][0]):
+                    for k in range(1,len(mv)):
+                        if int(rate[j][1]) == k:
+                            datalist[i][k]=rate[l][2]
+            
+            
+    return datalist
+
+list1=ratelist(npratings,npmovies,npuser)

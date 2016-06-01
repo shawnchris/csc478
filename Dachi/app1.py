@@ -1,5 +1,6 @@
 # CSC478 Final Project Application Part 1
 import os
+import sys
 import numpy as np
 import scipy as sp
 import pandas as pd
@@ -70,8 +71,10 @@ def kNNErrStat(data,uList,mList,k):
 # Load movieLens data
 if __name__ == "__main__":
     print "loading data..."
-    os.chdir('/Users/Dachi/Dropbox/5_Career/DePaul/CSC478_ProgrammingDataMiningApp/Project')
-    path = './Movielens'
+    if sys.argv[1] is None:
+        path = '/Users/Dachi/Dropbox/5_Career/DePaul/CSC478_ProgrammingDataMiningApp/Project/Movielens'
+    else:
+        path = sys.argv[1]
     os.chdir(path)
     users = pd.read_table('u.user',delimiter='|',header=None,names=["id","age","gender","job","zip code"])
     movies = pd.read_table('u.item',delimiter='|',header=None, names=["id","title","rl_date","vrl_date","url",

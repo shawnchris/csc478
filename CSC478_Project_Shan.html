@@ -2224,7 +2224,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[290]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Generate user to movie_rating matrix.</span>
@@ -2240,7 +2240,7 @@ SUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[46]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[290]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2255,7 +2255,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[291]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ratings</span><span class="p">)):</span>
@@ -2272,7 +2272,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[292]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">UR</span><span class="p">[</span><span class="mi">195</span><span class="p">,</span> <span class="mi">241</span><span class="p">]</span>
@@ -2286,7 +2286,7 @@ SUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[292]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -3535,7 +3535,7 @@ mFkuJwczy/XfQpuWtOD0TT4AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[156]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">treeclf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -3550,7 +3550,7 @@ mFkuJwczy/XfQpuWtOD0TT4AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[157]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">treepreds_test</span>
@@ -3566,37 +3566,37 @@ mFkuJwczy/XfQpuWtOD0TT4AAAAASUVORK5CYII=
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&apos;engineer&apos; &apos;programmer&apos; &apos;engineer&apos; &apos;marketing&apos; &apos;librarian&apos; &apos;programmer&apos;
- &apos;administrator&apos; &apos;programmer&apos; &apos;other&apos; &apos;administrator&apos; &apos;student&apos; &apos;educator&apos;
- &apos;engineer&apos; &apos;administrator&apos; &apos;programmer&apos; &apos;programmer&apos; &apos;engineer&apos; &apos;student&apos;
- &apos;marketing&apos; &apos;writer&apos; &apos;other&apos; &apos;engineer&apos; &apos;engineer&apos; &apos;executive&apos; &apos;student&apos;
- &apos;administrator&apos; &apos;student&apos; &apos;educator&apos; &apos;engineer&apos; &apos;educator&apos; &apos;engineer&apos;
- &apos;engineer&apos; &apos;other&apos; &apos;engineer&apos; &apos;student&apos; &apos;engineer&apos; &apos;artist&apos; &apos;engineer&apos;
- &apos;student&apos; &apos;executive&apos; &apos;programmer&apos; &apos;engineer&apos; &apos;educator&apos; &apos;librarian&apos;
- &apos;none&apos; &apos;engineer&apos; &apos;other&apos; &apos;programmer&apos; &apos;student&apos; &apos;other&apos; &apos;student&apos;
- &apos;student&apos; &apos;student&apos; &apos;administrator&apos; &apos;lawyer&apos; &apos;executive&apos; &apos;student&apos;
- &apos;engineer&apos; &apos;student&apos; &apos;administrator&apos; &apos;student&apos; &apos;educator&apos; &apos;entertainment&apos;
- &apos;programmer&apos; &apos;artist&apos; &apos;engineer&apos; &apos;student&apos; &apos;student&apos; &apos;student&apos;
- &apos;programmer&apos; &apos;student&apos; &apos;student&apos; &apos;administrator&apos; &apos;educator&apos; &apos;educator&apos;
- &apos;technician&apos; &apos;student&apos; &apos;student&apos; &apos;administrator&apos; &apos;programmer&apos; &apos;student&apos;
- &apos;technician&apos; &apos;student&apos; &apos;entertainment&apos; &apos;educator&apos; &apos;scientist&apos; &apos;educator&apos;
+<pre>[&apos;engineer&apos; &apos;other&apos; &apos;engineer&apos; &apos;marketing&apos; &apos;librarian&apos; &apos;programmer&apos;
+ &apos;student&apos; &apos;programmer&apos; &apos;retired&apos; &apos;other&apos; &apos;student&apos; &apos;educator&apos; &apos;engineer&apos;
+ &apos;marketing&apos; &apos;programmer&apos; &apos;student&apos; &apos;engineer&apos; &apos;student&apos; &apos;marketing&apos;
+ &apos;writer&apos; &apos;executive&apos; &apos;engineer&apos; &apos;engineer&apos; &apos;other&apos; &apos;other&apos; &apos;administrator&apos;
+ &apos;student&apos; &apos;lawyer&apos; &apos;engineer&apos; &apos;educator&apos; &apos;engineer&apos; &apos;engineer&apos; &apos;other&apos;
+ &apos;engineer&apos; &apos;student&apos; &apos;engineer&apos; &apos;artist&apos; &apos;other&apos; &apos;student&apos; &apos;executive&apos;
+ &apos;artist&apos; &apos;technician&apos; &apos;educator&apos; &apos;engineer&apos; &apos;none&apos; &apos;student&apos; &apos;other&apos;
+ &apos;artist&apos; &apos;student&apos; &apos;educator&apos; &apos;student&apos; &apos;student&apos; &apos;administrator&apos;
+ &apos;administrator&apos; &apos;lawyer&apos; &apos;executive&apos; &apos;student&apos; &apos;engineer&apos; &apos;student&apos;
+ &apos;administrator&apos; &apos;student&apos; &apos;librarian&apos; &apos;entertainment&apos; &apos;programmer&apos;
+ &apos;administrator&apos; &apos;engineer&apos; &apos;student&apos; &apos;student&apos; &apos;student&apos; &apos;programmer&apos;
+ &apos;student&apos; &apos;student&apos; &apos;administrator&apos; &apos;educator&apos; &apos;educator&apos; &apos;technician&apos;
+ &apos;student&apos; &apos;student&apos; &apos;administrator&apos; &apos;other&apos; &apos;student&apos; &apos;technician&apos;
+ &apos;student&apos; &apos;entertainment&apos; &apos;educator&apos; &apos;scientist&apos; &apos;educator&apos;
  &apos;administrator&apos; &apos;none&apos; &apos;student&apos; &apos;student&apos; &apos;educator&apos; &apos;engineer&apos;
  &apos;librarian&apos; &apos;writer&apos; &apos;student&apos; &apos;student&apos; &apos;student&apos; &apos;student&apos; &apos;student&apos;
- &apos;entertainment&apos; &apos;other&apos; &apos;other&apos; &apos;executive&apos; &apos;engineer&apos; &apos;entertainment&apos;
- &apos;student&apos; &apos;executive&apos; &apos;scientist&apos; &apos;writer&apos; &apos;other&apos; &apos;student&apos; &apos;student&apos;
- &apos;student&apos; &apos;educator&apos; &apos;other&apos; &apos;administrator&apos; &apos;student&apos; &apos;student&apos; &apos;student&apos;
- &apos;student&apos; &apos;other&apos; &apos;student&apos; &apos;engineer&apos; &apos;healthcare&apos; &apos;other&apos; &apos;student&apos;
- &apos;technician&apos; &apos;executive&apos; &apos;programmer&apos; &apos;programmer&apos; &apos;student&apos; &apos;scientist&apos;
+ &apos;entertainment&apos; &apos;other&apos; &apos;other&apos; &apos;executive&apos; &apos;engineer&apos; &apos;student&apos; &apos;student&apos;
+ &apos;executive&apos; &apos;librarian&apos; &apos;writer&apos; &apos;other&apos; &apos;student&apos; &apos;student&apos; &apos;student&apos;
+ &apos;educator&apos; &apos;other&apos; &apos;administrator&apos; &apos;student&apos; &apos;student&apos; &apos;student&apos; &apos;student&apos;
+ &apos;other&apos; &apos;student&apos; &apos;engineer&apos; &apos;healthcare&apos; &apos;other&apos; &apos;student&apos; &apos;technician&apos;
+ &apos;executive&apos; &apos;programmer&apos; &apos;scientist&apos; &apos;administrator&apos; &apos;scientist&apos;
  &apos;librarian&apos; &apos;technician&apos; &apos;technician&apos; &apos;other&apos; &apos;other&apos; &apos;student&apos;
- &apos;administrator&apos; &apos;engineer&apos; &apos;librarian&apos; &apos;student&apos; &apos;engineer&apos; &apos;engineer&apos;
- &apos;marketing&apos; &apos;writer&apos; &apos;educator&apos; &apos;educator&apos; &apos;student&apos; &apos;executive&apos;
- &apos;healthcare&apos; &apos;engineer&apos; &apos;student&apos; &apos;programmer&apos; &apos;artist&apos; &apos;executive&apos;
- &apos;engineer&apos; &apos;artist&apos; &apos;lawyer&apos; &apos;other&apos; &apos;engineer&apos; &apos;student&apos; &apos;scientist&apos;
- &apos;student&apos; &apos;engineer&apos; &apos;entertainment&apos; &apos;student&apos; &apos;programmer&apos; &apos;engineer&apos;
- &apos;programmer&apos; &apos;student&apos; &apos;technician&apos; &apos;student&apos; &apos;engineer&apos; &apos;librarian&apos;
- &apos;writer&apos; &apos;scientist&apos; &apos;executive&apos; &apos;librarian&apos; &apos;educator&apos; &apos;educator&apos;
- &apos;engineer&apos; &apos;scientist&apos; &apos;librarian&apos; &apos;scientist&apos; &apos;student&apos; &apos;administrator&apos;
- &apos;salesman&apos;]
+ &apos;administrator&apos; &apos;engineer&apos; &apos;educator&apos; &apos;administrator&apos; &apos;engineer&apos;
+ &apos;engineer&apos; &apos;other&apos; &apos;artist&apos; &apos;educator&apos; &apos;educator&apos; &apos;student&apos;
+ &apos;administrator&apos; &apos;healthcare&apos; &apos;engineer&apos; &apos;student&apos; &apos;programmer&apos; &apos;artist&apos;
+ &apos;executive&apos; &apos;engineer&apos; &apos;artist&apos; &apos;lawyer&apos; &apos;other&apos; &apos;engineer&apos; &apos;student&apos;
+ &apos;administrator&apos; &apos;student&apos; &apos;engineer&apos; &apos;student&apos; &apos;student&apos; &apos;executive&apos;
+ &apos;engineer&apos; &apos;scientist&apos; &apos;student&apos; &apos;technician&apos; &apos;student&apos; &apos;engineer&apos;
+ &apos;librarian&apos; &apos;writer&apos; &apos;scientist&apos; &apos;executive&apos; &apos;librarian&apos; &apos;administrator&apos;
+ &apos;educator&apos; &apos;engineer&apos; &apos;scientist&apos; &apos;librarian&apos; &apos;scientist&apos; &apos;student&apos;
+ &apos;scientist&apos; &apos;administrator&apos;]
 </pre>
 </div>
 </div>
@@ -3607,7 +3607,7 @@ mFkuJwczy/XfQpuWtOD0TT4AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">treeclf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">UR_test</span><span class="p">,</span> <span class="n">UR_target_test</span><span class="p">)</span>
@@ -3634,7 +3634,7 @@ mFkuJwczy/XfQpuWtOD0TT4AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[159]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">treeclf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">UR_train</span><span class="p">,</span> <span class="n">UR_target_train</span><span class="p">)</span>
@@ -3650,7 +3650,7 @@ mFkuJwczy/XfQpuWtOD0TT4AAAAASUVORK5CYII=
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.791777188329
+<pre>0.785145888594
 </pre>
 </div>
 </div>
@@ -4362,6 +4362,1345 @@ y/8HXq6s+6S3MWsAAAAASUVORK5CYII=
 </pre></div>
 
 </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Section 4: Clustering</span>
+<span class="c1"># We will try to perform K-means clustering on the movie training data. Display the top 3</span>
+<span class="c1"># genres in each cluster, percentage of movies in the cluster in which the genre appear,</span>
+<span class="c1"># and the size of the cluster. Using the cluster assignments as class labels, categorize</span>
+<span class="c1"># each of the movie in the test data into each of the appropriate cluster. </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[206]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Prepare data</span>
+<span class="n">movie_genres</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s2">&quot;u.item&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">24</span><span class="p">)))</span>
+<span class="n">movie_ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s2">&quot;u.item&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[207]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">movie_genres</span><span class="o">.</span><span class="n">shape</span>
+<span class="k">print</span> <span class="n">movie_ids</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1682L, 19L)
+(1682L,)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[213]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">MG_train</span><span class="p">,</span> <span class="n">MG_test</span><span class="p">,</span> <span class="n">MG_id_train</span><span class="p">,</span> <span class="n">MG_id_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">movie_genres</span><span class="p">,</span> <span class="n">movie_ids</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[214]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">MG_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="k">print</span> <span class="n">MG_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1345L, 19L)
+(337L, 19L)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[242]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">genres</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s2">&quot;u.genre&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;|S15&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[191]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">kMeans</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[199]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">distCosine</span><span class="p">(</span><span class="n">vecA</span><span class="p">,</span> <span class="n">vecB</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">vecA</span><span class="p">,</span> <span class="n">vecB</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vecA</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vecB</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[274]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Let&#39;s first try to group movies into 5 clusters</span>
+<span class="n">centroids5</span><span class="p">,</span> <span class="n">clusters5</span> <span class="o">=</span> <span class="n">kMeans</span><span class="o">.</span><span class="n">kMeans</span><span class="p">(</span><span class="n">MG_train</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">distCosine</span><span class="p">,</span> <span class="n">kMeans</span><span class="o">.</span><span class="n">randCent</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[275]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">centroids5</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[275]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0.        ,  0.36585366,  0.08536585,  0.01219512,  0.        ,
+         0.04878049,  0.        ,  0.        ,  0.25      ,  0.        ,
+         0.04878049,  0.00609756,  0.        ,  0.13414634,  0.09146341,
+         0.12804878,  0.98170732,  0.01829268,  0.        ],
+       [ 0.02380952,  0.1547619 ,  0.01190476,  0.        ,  0.        ,
+         0.08333333,  0.92857143,  0.        ,  0.44047619,  0.01190476,
+         0.1547619 ,  0.        ,  0.        ,  0.11904762,  0.05952381,
+         0.01190476,  0.33333333,  0.        ,  0.        ],
+       [ 0.        ,  0.02915082,  0.00633714,  0.00380228,  0.01267427,
+         0.41064639,  0.00126743,  0.05449937,  0.63117871,  0.00380228,
+         0.        ,  0.        ,  0.02408112,  0.0139417 ,  0.17490494,
+         0.01013942,  0.00126743,  0.03802281,  0.00633714],
+       [ 0.        ,  0.09876543,  0.        ,  0.        ,  0.        ,
+         0.13580247,  0.02469136,  0.        ,  0.0617284 ,  0.        ,
+         0.        ,  0.86419753,  0.        ,  0.        ,  0.02469136,
+         0.08641975,  0.12345679,  0.        ,  0.13580247],
+       [ 0.        ,  0.39647577,  0.37444934,  0.13215859,  0.39647577,
+         0.21585903,  0.01762115,  0.        ,  0.030837  ,  0.05286344,
+         0.        ,  0.00881057,  0.10572687,  0.02202643,  0.18502203,
+         0.14977974,  0.        ,  0.0660793 ,  0.02643172]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[276]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">clusters5</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[276]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 2.        ,  0.22243194],
+       [ 2.        ,  0.21832348],
+       [ 2.        ,  0.03529551],
+       ..., 
+       [ 4.        ,  0.27632482],
+       [ 2.        ,  0.03529551],
+       [ 2.        ,  0.86467014]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[268]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="n">clusters</span><span class="p">,</span> <span class="n">movie_genres</span><span class="p">,</span> <span class="n">MG_id</span><span class="p">,</span> <span class="n">genres</span><span class="p">,</span> <span class="n">number_clusters</span><span class="p">):</span>
+    <span class="n">number_genres</span> <span class="o">=</span> <span class="n">movie_genres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">cluster_genre</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">number_clusters</span><span class="p">,</span> <span class="n">number_genres</span><span class="p">))</span>
+    <span class="n">cluster_size</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">number_clusters</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">clusters</span><span class="p">)):</span>
+        <span class="n">cluster_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">clusters</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">cluster_size</span><span class="p">[</span><span class="n">cluster_id</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">movie_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">MG_id</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_genres</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">movie_genres</span><span class="p">[</span><span class="n">movie_id</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">continue</span>
+            <span class="n">cluster_genre</span><span class="p">[</span><span class="n">cluster_id</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_clusters</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;Cluster </span><span class="si">%d</span><span class="s2">:&quot;</span><span class="o">%</span><span class="k">k</span>
+        <span class="k">print</span> <span class="s2">&quot;Cluster size: </span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="k">cluster_size</span>[k]
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">cluster_genre</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+        <span class="k">print</span> <span class="s2">&quot;Top three genres:&quot;</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">print</span> <span class="s2">&quot;</span><span class="si">%-15s</span><span class="se">\t</span><span class="si">%d</span><span class="se">\t\t</span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">genres</span><span class="p">[</span><span class="n">idx</span><span class="p">[</span><span class="n">p</span><span class="p">]],</span> <span class="n">cluster_genre</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">idx</span><span class="p">[</span><span class="n">p</span><span class="p">]],</span> <span class="n">cluster_genre</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">idx</span><span class="p">[</span><span class="n">p</span><span class="p">]]</span><span class="o">/</span> <span class="n">cluster_size</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+        <span class="k">print</span> <span class="s2">&quot;------------------------------------------------------&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[277]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">clusters5</span><span class="p">,</span> <span class="n">movie_genres</span><span class="p">,</span> <span class="n">MG_id_train</span><span class="p">,</span> <span class="n">genres</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Cluster 0:
+Cluster size: 164
+Top three genres:
+Thriller       	161		0.981707
+Action         	60		0.365854
+Drama          	41		0.250000
+------------------------------------------------------
+Cluster 1:
+Cluster size: 84
+Top three genres:
+Crime          	78		0.928571
+Drama          	37		0.440476
+Thriller       	28		0.333333
+------------------------------------------------------
+Cluster 2:
+Cluster size: 789
+Top three genres:
+Drama          	498		0.631179
+Comedy         	324		0.410646
+Romance        	138		0.174905
+------------------------------------------------------
+Cluster 3:
+Cluster size: 81
+Top three genres:
+Horror         	70		0.864198
+Western        	11		0.135802
+Comedy         	11		0.135802
+------------------------------------------------------
+Cluster 4:
+Cluster size: 227
+Top three genres:
+Action         	90		0.396476
+Children&apos;s     	90		0.396476
+Adventure      	85		0.374449
+------------------------------------------------------
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># As we can see from above results, when we group movies to 5 clusters,</span>
+<span class="c1"># each cluster will have 1 or 2 dominated genres.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[278]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Let&#39;s try to group movies into 10 clusters</span>
+<span class="n">centroids10</span><span class="p">,</span> <span class="n">clusters10</span> <span class="o">=</span> <span class="n">kMeans</span><span class="o">.</span><span class="n">kMeans</span><span class="p">(</span><span class="n">MG_train</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">distCosine</span><span class="p">,</span> <span class="n">kMeans</span><span class="o">.</span><span class="n">randCent</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[280]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">clusters10</span><span class="p">,</span> <span class="n">movie_genres</span><span class="p">,</span> <span class="n">MG_id_train</span><span class="p">,</span> <span class="n">genres</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Cluster 0:
+Cluster size: 135
+Top three genres:
+Comedy         	92		0.681481
+Romance        	64		0.474074
+Children&apos;s     	59		0.437037
+------------------------------------------------------
+Cluster 1:
+Cluster size: 162
+Top three genres:
+Action         	137		0.845679
+Adventure      	79		0.487654
+Thriller       	51		0.314815
+------------------------------------------------------
+Cluster 2:
+Cluster size: 214
+Top three genres:
+Comedy         	214		1.000000
+Action         	10		0.046729
+War            	8		0.037383
+------------------------------------------------------
+Cluster 3:
+Cluster size: 63
+Top three genres:
+Drama          	63		1.000000
+Comedy         	63		1.000000
+Crime          	2		0.031746
+------------------------------------------------------
+Cluster 4:
+Cluster size: 86
+Top three genres:
+Thriller       	79		0.918605
+Mystery        	25		0.290698
+Film-Noir      	17		0.197674
+------------------------------------------------------
+Cluster 5:
+Cluster size: 66
+Top three genres:
+Horror         	58		0.878788
+Sci-Fi         	16		0.242424
+Comedy         	11		0.166667
+------------------------------------------------------
+Cluster 6:
+Cluster size: 43
+Top three genres:
+Documentary    	39		0.906977
+War            	4		0.093023
+Western        	0		0.000000
+------------------------------------------------------
+Cluster 7:
+Cluster size: 115
+Top three genres:
+Romance        	115		1.000000
+Drama          	85		0.739130
+Comedy         	10		0.086957
+------------------------------------------------------
+Cluster 8:
+Cluster size: 367
+Top three genres:
+Drama          	367		1.000000
+Action         	17		0.046322
+War            	17		0.046322
+------------------------------------------------------
+Cluster 9:
+Cluster size: 94
+Top three genres:
+Drama          	70		0.744681
+Thriller       	57		0.606383
+Crime          	55		0.585106
+------------------------------------------------------
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># As we can see from above results, when we group movies to 10 clusters,</span>
+<span class="c1"># each cluster will have 1 or 2 dominated genres but the percentage of</span>
+<span class="c1"># the 1st one appears more than the 2nd one.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[281]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Try to categorize each of the movies in the 20% set-aside data into</span>
+<span class="c1"># each of the 5 cluster. Categorization is based on Cosine similarity</span>
+<span class="c1"># between each test movie and each cluster centroids. Print the results</span>
+<span class="c1"># with the obtained cluster id for each test movie as well as Cosine</span>
+<span class="c1"># similarities between each test movie and each of the 5 clusters.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[282]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">Cosine</span><span class="p">(</span><span class="n">vecA</span><span class="p">,</span> <span class="n">vecB</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">vecA</span><span class="p">,</span> <span class="n">vecB</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vecA</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vecB</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[285]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s2">&quot;Assignment</span><span class="se">\t</span><span class="s2">Dist C0</span><span class="se">\t\t</span><span class="s2">Dist C1</span><span class="se">\t\t</span><span class="s2">Dist C2</span><span class="se">\t\t</span><span class="s2">Dist C3</span><span class="se">\t\t</span><span class="s2">Dist C4&quot;</span>
+<span class="k">for</span> <span class="n">instance</span> <span class="ow">in</span> <span class="n">MG_test</span><span class="p">:</span>
+    <span class="c1">#compute the similarity of each centroids</span>
+    <span class="n">cos_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centroids5</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centroids5</span><span class="p">)):</span>
+        <span class="n">cos_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Cosine</span><span class="p">(</span><span class="n">centroids5</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">instance</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s2">&quot;Cluster</span><span class="si">%d</span><span class="se">\t</span><span class="si">%.4f</span><span class="se">\t\t</span><span class="si">%.4f</span><span class="se">\t\t</span><span class="si">%.4f</span><span class="se">\t\t</span><span class="si">%.4f</span><span class="se">\t\t</span><span class="si">%.4f</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">cos_list</span><span class="o">.</span><span class="n">argmax</span><span class="p">(),</span> <span class="n">cos_list</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cos_list</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">cos_list</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">cos_list</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">cos_list</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Assignment	Dist C0		Dist C1		Dist C2		Dist C3		Dist C4
+Cluster1	0.0000		0.8336		0.0016		0.0272		0.0228
+Cluster4	0.0968		0.0160		0.0212		0.0477		0.6304
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.6499		0.6412		0.0245		0.1362		0.5106
+Cluster2	0.0000		0.0000		0.0701		0.0000		0.0000
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster4	0.3034		0.0926		0.0339		0.1180		0.6884
+Cluster4	0.0064		0.0000		0.0301		0.0000		0.4743
+Cluster0	0.7135		0.2992		0.1411		0.1362		0.3908
+Cluster0	0.6720		0.2244		0.0261		0.6471		0.3594
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2190		0.3174		0.7334		0.0674		0.1977
+Cluster2	0.1405		0.2283		0.5150		0.0393		0.1515
+Cluster0	0.5876		0.2468		0.4359		0.1809		0.2998
+Cluster0	0.7728		0.2591		0.0301		0.1966		0.4085
+Cluster1	0.3225		0.7898		0.4915		0.1180		0.3327
+Cluster1	0.3014		0.7214		0.6898		0.1771		0.4279
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster3	0.0055		0.0000		0.0000		0.9536		0.0114
+Cluster4	0.0111		0.0000		0.0049		0.0000		0.1712
+Cluster0	0.7118		0.2191		0.0104		0.1638		0.1372
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster2	0.1884		0.2591		0.6271		0.0551		0.2108
+Cluster2	0.1721		0.2796		0.6089		0.0482		0.0888
+Cluster0	0.7157		0.2872		0.0138		0.0963		0.0202
+Cluster0	0.8905		0.2992		0.0016		0.1362		0.0000
+Cluster4	0.0830		0.0534		0.2250		0.0272		0.2396
+Cluster0	0.7118		0.2191		0.0104		0.1638		0.1372
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.8643		0.3098		0.0277		0.1734		0.3631
+Cluster4	0.2795		0.0956		0.1488		0.1036		0.6787
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster4	0.3672		0.3147		0.4952		0.1023		0.5995
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster0	0.8643		0.3098		0.0277		0.1734		0.3631
+Cluster1	0.6297		0.8010		0.0023		0.1156		0.0161
+Cluster3	0.6336		0.2116		0.0012		0.7707		0.0081
+Cluster4	0.2491		0.1111		0.1798		0.0787		0.4842
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster4	0.3034		0.0926		0.0339		0.1180		0.6884
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2190		0.3174		0.7334		0.0674		0.1977
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.0064		0.0000		0.0301		0.0000		0.4743
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.0774		0.0107		0.0082		0.0000		0.4850
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.1217		0.1069		0.0179		0.0000		0.0285
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.3168		0.1058		0.0357		0.1445		0.5003
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0000		0.0000		0.0701		0.0000		0.0000
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster3	0.0055		0.0000		0.0000		0.9536		0.0114
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.1721		0.2796		0.6089		0.0482		0.0888
+Cluster2	0.2190		0.3174		0.7334		0.0674		0.1977
+Cluster2	0.1565		0.7527		0.7749		0.1416		0.1976
+Cluster3	0.0352		0.0529		0.3736		0.7803		0.2057
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.1603		0.2796		0.5800		0.1541		0.0524
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2190		0.3174		0.7334		0.0674		0.1977
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster1	0.6297		0.8010		0.0023		0.1156		0.0161
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2425		0.2872		0.5835		0.1156		0.1654
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.7157		0.2872		0.0138		0.0963		0.0202
+Cluster4	0.0774		0.0107		0.0082		0.0000		0.4850
+Cluster0	0.7153		0.4628		0.4802		0.1180		0.0395
+Cluster2	0.2464		0.3552		0.5869		0.0482		0.0484
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.3319		0.1389		0.0375		0.1090		0.5135
+Cluster2	0.1603		0.2796		0.5858		0.0482		0.3913
+Cluster0	0.7728		0.2591		0.0301		0.1966		0.4085
+Cluster1	0.1173		0.1738		0.0127		0.0000		0.0202
+Cluster3	0.0055		0.0000		0.0000		0.9536		0.0114
+Cluster4	0.0665		0.0076		0.0404		0.0000		0.4034
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster4	0.2894		0.1058		0.0323		0.0771		0.7060
+Cluster2	0.1603		0.2796		0.5858		0.0482		0.3913
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.0064		0.0000		0.0301		0.0000		0.4743
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster1	0.0313		0.6423		0.3748		0.1252		0.2138
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster4	0.2894		0.1058		0.0323		0.0771		0.7060
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.0313		0.0529		0.3851		0.1060		0.5608
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster0	0.5876		0.2468		0.4359		0.1809		0.2998
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.1309		0.2345		0.4811		0.0393		0.3590
+Cluster4	0.2544		0.1122		0.3139		0.1771		0.5363
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster4	0.0000		0.0107		0.0049		0.0000		0.0685
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster0	0.6450		0.4072		0.4726		0.1180		0.0626
+Cluster3	0.0055		0.0000		0.0000		0.9536		0.0114
+Cluster0	0.7900		0.4912		0.5754		0.1445		0.0282
+Cluster4	0.0830		0.0534		0.2250		0.0272		0.2396
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster1	0.1603		0.8690		0.5754		0.0674		0.0444
+Cluster3	0.0055		0.0000		0.0000		0.9536		0.0114
+Cluster2	0.1134		0.0605		0.3828		0.1734		0.3348
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0313		0.0529		0.3794		0.2119		0.2219
+Cluster2	0.1721		0.2796		0.6089		0.0482		0.0888
+Cluster4	0.0064		0.0000		0.0301		0.0000		0.4743
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.0313		0.0529		0.3851		0.1060		0.5608
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.7157		0.2872		0.0138		0.0963		0.0202
+Cluster3	0.0000		0.0000		0.0082		0.1499		0.0342
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.7900		0.4912		0.5754		0.1445		0.0282
+Cluster0	0.6259		0.1851		0.0132		0.1337		0.3920
+Cluster2	0.2190		0.3174		0.7334		0.0674		0.1977
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.0548		0.0076		0.0173		0.0000		0.7060
+Cluster0	0.1217		0.1069		0.0179		0.0000		0.0285
+Cluster0	0.8366		0.4813		0.4915		0.1809		0.3195
+Cluster4	0.0447		0.0123		0.0169		0.0000		0.6160
+Cluster4	0.3319		0.1389		0.0375		0.1090		0.5135
+Cluster2	0.1884		0.2591		0.6271		0.0551		0.2108
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster4	0.2848		0.1176		0.2935		0.1771		0.7360
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.0548		0.0076		0.0173		0.0000		0.7060
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.8366		0.4813		0.4915		0.1809		0.3195
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster1	0.0000		0.8336		0.0016		0.0272		0.0228
+Cluster4	0.0703		0.0494		0.3192		0.0865		0.7379
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster1	0.6450		0.8823		0.4708		0.1337		0.0362
+Cluster4	0.0830		0.0534		0.2250		0.0272		0.2396
+Cluster2	0.1660		0.2715		0.8022		0.1258		0.2339
+Cluster2	0.0734		0.0740		0.4529		0.1023		0.3788
+Cluster2	0.1603		0.2796		0.5858		0.0482		0.3913
+Cluster1	0.1980		0.7157		0.4774		0.1101		0.1482
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster4	0.2659		0.1511		0.4001		0.1830		0.5608
+Cluster4	0.0313		0.0529		0.3851		0.1060		0.5608
+Cluster4	0.6011		0.2342		0.2713		0.1767		0.6328
+Cluster2	0.1721		0.2796		0.6089		0.0482		0.0888
+Cluster4	0.3319		0.1389		0.0375		0.1090		0.5135
+Cluster2	0.0000		0.0000		0.0701		0.0000		0.0000
+Cluster2	0.1721		0.2796		0.6089		0.0482		0.0888
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster1	0.5397		0.7342		0.0019		0.0944		0.0132
+Cluster1	0.2395		0.5923		0.1525		0.0944		0.4480
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.7157		0.2872		0.0138		0.0963		0.0202
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster4	0.3034		0.0926		0.0339		0.1180		0.6884
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.8643		0.3098		0.0277		0.1734		0.3631
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.8366		0.4813		0.4915		0.1809		0.3195
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.2171		0.1234		0.3446		0.1494		0.5369
+Cluster4	0.2572		0.1051		0.2626		0.5849		0.6634
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.0000		0.0000		0.0701		0.0000		0.0000
+Cluster2	0.2190		0.3174		0.7334		0.0674		0.1977
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster4	0.1134		0.1058		0.0092		0.0674		0.1372
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.1721		0.2796		0.6089		0.0482		0.0888
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster4	0.0774		0.0107		0.0082		0.0000		0.4850
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.1721		0.2796		0.6089		0.0482		0.0888
+Cluster4	0.0313		0.0529		0.3851		0.1060		0.5608
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster4	0.2363		0.5676		0.0273		0.0787		0.5896
+Cluster2	0.0117		0.0000		0.0842		0.0000		0.0605
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster4	0.2659		0.1511		0.4001		0.1830		0.5608
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster3	0.0055		0.0000		0.0000		0.9536		0.0114
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster0	0.8905		0.2992		0.0016		0.1362		0.0000
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster2	0.0313		0.0529		0.3955		0.1060		0.2945
+Cluster2	0.0000		0.0000		0.0701		0.0000		0.0000
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.0830		0.0534		0.2250		0.0272		0.2396
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster1	0.1603		0.8690		0.5754		0.0674		0.0444
+Cluster4	0.2171		0.1234		0.3314		0.2360		0.4776
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster1	0.0313		0.6423		0.3748		0.1252		0.2138
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster4	0.0064		0.0000		0.0301		0.0000		0.4743
+Cluster3	0.5844		0.1789		0.0085		0.6843		0.1186
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.2347		0.0982		0.0381		0.0771		0.7262
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster4	0.0255		0.0432		0.3324		0.0865		0.5369
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster3	0.0055		0.0000		0.0000		0.9536		0.0114
+Cluster0	0.8905		0.2992		0.0016		0.1362		0.0000
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.6775		0.2244		0.0506		0.1703		0.3965
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.1721		0.2796		0.6089		0.0482		0.0888
+Cluster3	0.6336		0.2116		0.0012		0.7707		0.0081
+Cluster4	0.0000		0.0000		0.0310		0.0000		0.1369
+Cluster4	0.2842		0.1172		0.1563		0.0787		0.7148
+Cluster4	0.2659		0.1511		0.4001		0.1830		0.5608
+Cluster4	0.0587		0.0378		0.1810		0.0193		0.2663
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster3	0.5876		0.2345		0.0113		0.6292		0.0231
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster4	0.2710		0.0802		0.0538		0.1022		0.6390
+Cluster3	0.0055		0.0000		0.0000		0.9536		0.0114
+Cluster1	0.5088		0.6198		0.0106		0.5586		0.0314
+Cluster0	0.8905		0.2992		0.0016		0.1362		0.0000
+Cluster4	0.3319		0.1389		0.0375		0.1090		0.5135
+Cluster4	0.2659		0.1511		0.4001		0.1830		0.5608
+Cluster1	0.0000		0.8336		0.0016		0.0272		0.0228
+Cluster0	0.7079		0.2298		0.0302		0.1703		0.5962
+Cluster4	0.3319		0.1389		0.0375		0.1090		0.5135
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster4	0.1217		0.0748		0.3857		0.1362		0.3908
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2190		0.3174		0.7334		0.0674		0.1977
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster1	0.1603		0.8690		0.5754		0.0674		0.0444
+Cluster2	0.1134		0.0605		0.3828		0.1734		0.3348
+Cluster3	0.6336		0.2116		0.0012		0.7707		0.0081
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster4	0.2894		0.1058		0.0323		0.0771		0.7060
+Cluster2	0.3950		0.3778		0.6008		0.1252		0.3913
+Cluster4	0.1161		0.0107		0.0130		0.0954		0.1940
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.7728		0.2591		0.0301		0.1966		0.4085
+Cluster2	0.1916		0.3325		0.9479		0.1541		0.2259
+Cluster4	0.5577		0.1832		0.0499		0.1390		0.6033
+Cluster4	0.0830		0.0534		0.2250		0.0272		0.2396
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster0	0.7079		0.2298		0.0302		0.1703		0.5962
+Cluster3	0.6336		0.2116		0.0012		0.7707		0.0081
+Cluster1	0.1603		0.8690		0.5754		0.0674		0.0444
+Cluster2	0.3950		0.3778		0.6008		0.1252		0.3913
+Cluster1	0.0000		0.8336		0.0016		0.0272		0.0228
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster3	0.0000		0.0000		0.0082		0.1499		0.0342
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster0	0.8905		0.2992		0.0016		0.1362		0.0000
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0000		0.0000		0.0701		0.0000		0.0000
+Cluster4	0.0313		0.0529		0.3851		0.1060		0.5608
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster1	0.0000		0.8336		0.0016		0.0272		0.0228
+Cluster1	0.1603		0.8690		0.5754		0.0674		0.0444
+Cluster4	0.0166		0.0000		0.0489		0.0000		0.0856
+Cluster3	0.0055		0.0000		0.0000		0.9536		0.0114
+Cluster0	0.7504		0.2591		0.0273		0.1416		0.5764
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2190		0.3174		0.7334		0.0674		0.1977
+Cluster4	0.2659		0.1511		0.4001		0.1830		0.5608
+Cluster2	0.0442		0.0748		0.5284		0.1499		0.2796
+Cluster0	0.8643		0.3098		0.0277		0.1734		0.3631
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2044		0.3023		0.9039		0.1416		0.3228
+Cluster4	0.2351		0.1122		0.3115		0.1294		0.6818
+Cluster2	0.3950		0.3778		0.6008		0.1252		0.3913
+Cluster2	0.1134		0.0605		0.3828		0.1734		0.3348
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.6323		0.2653		0.1412		0.0944		0.1548
+Cluster0	0.7536		0.2838		0.1525		0.1573		0.4348
+Cluster2	0.0830		0.0740		0.4632		0.1023		0.3492
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster0	0.7504		0.2591		0.0273		0.1416		0.5764
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.2268		0.3954		0.8121		0.0681		0.0399
+Cluster2	0.0900		0.0907		0.5327		0.1252		0.3671
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[286]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Section 5. Item-Based collaborative filtering</span>
+<span class="c1"># </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[288]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Prepare data</span>
+<span class="n">movie_names</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s2">&quot;u.item&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;|S50&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[289]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">movie_names</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[289]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&apos;Toy Story (1995)&apos;, &apos;GoldenEye (1995)&apos;, &apos;Four Rooms (1995)&apos;, ...,
+       &apos;Sliding Doors (1998)&apos;, &apos;You So Crazy (1994)&apos;,
+       &apos;Scream of Stone (Schrei aus Stein) (1991)&apos;], 
+      dtype=&apos;|S50&apos;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[293]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">movie_names</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[293]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1682L,)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[304]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a function &quot;test&quot;. This function iterates over all users and for each performs</span>
+<span class="c1"># cross-validation on movies (by calling the provided &quot;cross_validate_user&quot; function),</span>
+<span class="c1"># and returns the error information necessary to compute Mean Absolute Error (MAE).</span>
+<span class="c1"># Perform 5-fold cross-validation (20% test-ratio) and compute MAE results using standard</span>
+<span class="c1"># item-based collaborative filtering (based on the rating prediction function &quot;standEst&quot;).</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[295]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">la</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">ecludSim</span><span class="p">(</span><span class="n">inA</span><span class="p">,</span><span class="n">inB</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inA</span> <span class="o">-</span> <span class="n">inB</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">pearsSim</span><span class="p">(</span><span class="n">inA</span><span class="p">,</span><span class="n">inB</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">inA</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="p">:</span> <span class="k">return</span> <span class="mf">1.0</span>
+    <span class="k">return</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">corrcoef</span><span class="p">(</span><span class="n">inA</span><span class="p">,</span> <span class="n">inB</span><span class="p">,</span> <span class="n">rowvar</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">cosSim</span><span class="p">(</span><span class="n">inA</span><span class="p">,</span><span class="n">inB</span><span class="p">):</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">inA</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">inB</span><span class="p">)</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inA</span><span class="p">)</span><span class="o">*</span><span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inB</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">num</span> <span class="o">/</span> <span class="n">denom</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">standEst</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">simTotal</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span> <span class="n">ratSimTotal</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">userRating</span> <span class="o">=</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">userRating</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">continue</span>
+        <span class="n">overLap</span> <span class="o">=</span> <span class="n">nonzero</span><span class="p">(</span><span class="n">logical_and</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[:,</span><span class="n">item</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> \
+                                      <span class="n">dataMat</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">overLap</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">similarity</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">similarity</span> <span class="o">=</span> <span class="n">simMeas</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[</span><span class="n">overLap</span><span class="p">,</span><span class="n">item</span><span class="p">],</span> \
+                                   <span class="n">dataMat</span><span class="p">[</span><span class="n">overLap</span><span class="p">,</span><span class="n">j</span><span class="p">])</span>
+        <span class="c1">#print &#39;the %d and %d similarity is: %f&#39; % (item, j, similarity)</span>
+        <span class="n">simTotal</span> <span class="o">+=</span> <span class="n">similarity</span>
+        <span class="n">ratSimTotal</span> <span class="o">+=</span> <span class="n">similarity</span> <span class="o">*</span> <span class="n">userRating</span>
+    <span class="k">if</span> <span class="n">simTotal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">ratSimTotal</span><span class="o">/</span><span class="n">simTotal</span>
+    
+<span class="k">def</span> <span class="nf">svdEst</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">simTotal</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span> <span class="n">ratSimTotal</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">mat</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)</span>
+    <span class="n">U</span><span class="p">,</span><span class="n">Sigma</span><span class="p">,</span><span class="n">VT</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">Sig4</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">Sigma</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span> <span class="c1">#arrange Sig4 into a diagonal matrix</span>
+    <span class="n">xformedItems</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">U</span><span class="p">[:,:</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">Sig4</span><span class="o">.</span><span class="n">I</span>  <span class="c1">#create transformed items</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">userRating</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">user</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">userRating</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span><span class="o">==</span><span class="n">item</span><span class="p">:</span> <span class="k">continue</span>
+        <span class="n">similarity</span> <span class="o">=</span> <span class="n">simMeas</span><span class="p">(</span><span class="n">xformedItems</span><span class="p">[</span><span class="n">item</span><span class="p">,:]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>\
+                             <span class="n">xformedItems</span><span class="p">[</span><span class="n">j</span><span class="p">,:]</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="c1">#print &#39;the %d and %d similarity is: %f&#39; % (item, j, similarity)</span>
+        <span class="n">simTotal</span> <span class="o">+=</span> <span class="n">similarity</span>
+        <span class="n">ratSimTotal</span> <span class="o">+=</span> <span class="n">similarity</span> <span class="o">*</span> <span class="n">userRating</span>
+    <span class="k">if</span> <span class="n">simTotal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">ratSimTotal</span><span class="o">/</span><span class="n">simTotal</span>
+
+<span class="c1"># This function is not needed for Assignment 4, but may be useful for experimentation</span>
+<span class="k">def</span> <span class="nf">recommend</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">simMeas</span><span class="o">=</span><span class="n">cosSim</span><span class="p">,</span> <span class="n">estMethod</span><span class="o">=</span><span class="n">standEst</span><span class="p">):</span>
+    <span class="n">unratedItems</span> <span class="o">=</span> <span class="n">nonzero</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">,:]</span><span class="o">.</span><span class="n">A</span><span class="o">==</span><span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#find unrated items </span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unratedItems</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;you rated everything&#39;</span>
+    <span class="n">itemScores</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">unratedItems</span><span class="p">:</span>
+        <span class="n">estimatedScore</span> <span class="o">=</span> <span class="n">estMethod</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+        <span class="n">itemScores</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">item</span><span class="p">,</span> <span class="n">estimatedScore</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">itemScores</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">jj</span><span class="p">:</span> <span class="n">jj</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)[:</span><span class="n">N</span><span class="p">]</span>
+
+<span class="c1"># This function performs cross-validation on a single user based on the test_ratio</span>
+<span class="c1"># For example, with test_ratio = 0.2, 5-fold x-validation is performed where in each fold, </span>
+<span class="c1"># 20 percent of rated items are withheld and the rest are used to estimate the withheld ratings</span>
+
+<span class="k">def</span> <span class="nf">cross_validate_user</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">test_ratio</span><span class="p">,</span> <span class="n">estMethod</span><span class="o">=</span><span class="n">standEst</span><span class="p">,</span> <span class="n">simMeas</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+    <span class="n">number_of_items</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">rated_items_by_user</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_items</span><span class="p">)</span> <span class="k">if</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">test_size</span> <span class="o">=</span> <span class="n">test_ratio</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">rated_items_by_user</span><span class="p">)</span>
+    <span class="n">test_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rated_items_by_user</span><span class="p">),</span> <span class="n">test_size</span><span class="p">)</span>
+    <span class="n">withheld_items</span> <span class="o">=</span> <span class="n">rated_items_by_user</span><span class="p">[</span><span class="n">test_indices</span><span class="p">]</span>
+    <span class="n">original_user_profile</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">])</span>
+    <span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">,</span> <span class="n">withheld_items</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># So that the withheld test items is not used in the rating estimation below</span>
+    <span class="n">error_u</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">count_u</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">withheld_items</span><span class="p">)</span>
+
+    <span class="c1"># Compute absolute error for user u over all test items</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">withheld_items</span><span class="p">:</span>
+        <span class="c1"># Estimate rating on the withheld item</span>
+        <span class="n">estimatedScore</span> <span class="o">=</span> <span class="n">estMethod</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+        <span class="n">error_u</span> <span class="o">=</span> <span class="n">error_u</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">estimatedScore</span> <span class="o">-</span> <span class="n">original_user_profile</span><span class="p">[</span><span class="n">item</span><span class="p">])</span>
+        
+    <span class="c1"># Now restore ratings of the withheld items to the user profile</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">withheld_items</span><span class="p">:</span>
+        <span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">,</span> <span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">original_user_profile</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+
+    <span class="c1"># Return sum of absolute errors and the count of test cases for this user</span>
+    <span class="c1"># Note that these will have to be accumulated for each user to compute MAE</span>
+    <span class="k">return</span> <span class="n">error_u</span><span class="p">,</span> <span class="n">count_u</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[300]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">test_ratio</span><span class="p">,</span> <span class="n">estMethod</span><span class="p">):</span>
+    <span class="c1"># Write this function to iterate over all users and for each perform cross-validation on items by calling</span>
+    <span class="c1"># the above cross-validation function on each user.</span>
+    <span class="c1"># MAE will be the ratio of total error across all test cases to the total number of test cases, for all users</span>
+    <span class="n">err_total</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">cnt_total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">userID</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)):</span>
+        <span class="c1">#print userID</span>
+        <span class="n">err</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="n">cross_validate_user</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">userID</span><span class="p">,</span> <span class="n">test_ratio</span><span class="p">,</span> <span class="n">estMethod</span><span class="o">=</span><span class="n">estMethod</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">isnan</span><span class="p">(</span><span class="n">err</span><span class="p">):</span> <span class="k">continue</span>
+        <span class="n">err_total</span> <span class="o">+=</span> <span class="n">err</span>
+        <span class="n">cnt_total</span> <span class="o">+=</span> <span class="n">count</span>
+    <span class="n">MAE</span> <span class="o">=</span> <span class="n">err_total</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">cnt_total</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s1">&#39;Mean Absoloute Error for &#39;</span><span class="p">,</span><span class="n">estMethod</span><span class="p">,</span><span class="s1">&#39; : &#39;</span><span class="p">,</span> <span class="n">MAE</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[301]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">UR</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[301]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(943L, 1682L)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[302]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">UR</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[302]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 5.,  3.,  4., ...,  0.,  0.,  0.],
+       [ 4.,  0.,  0., ...,  0.,  0.,  0.],
+       [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+       ..., 
+       [ 5.,  0.,  0., ...,  0.,  0.,  0.],
+       [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+       [ 0.,  5.,  0., ...,  0.,  0.,  0.]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[303]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="n">UR</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">standEst</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>D:\Anaconda2\lib\site-packages\ipykernel\__main__.py:67: DeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Mean Absoloute Error for  &lt;function standEst at 0x00000000236CA518&gt;  :  0.801198093893
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[305]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a function &quot;print_most_similar_movies&quot; which takes the movie ratings data,</span>
+<span class="c1"># a query movie id, a parameter k for the number of nearest neighbors, and a similarity</span>
+<span class="c1"># metric function, and prints the names of the query movie as well as the names of the</span>
+<span class="c1"># top k most similar movies based on user ratings.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[313]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">print_most_similar_movies</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movies</span><span class="p">,</span> <span class="n">queryMovie</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s1">&#39;Selected movie: </span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="k">print</span> <span class="n">movies</span><span class="p">[</span><span class="n">queryMovie</span><span class="p">]</span>
+    
+    <span class="n">simVec</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">movieID</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">movieID</span> <span class="o">==</span> <span class="n">queryMovie</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">simVec</span><span class="p">[</span><span class="n">movieID</span><span class="p">]</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[:,</span><span class="n">movieID</span><span class="p">],</span> <span class="n">dataMat</span><span class="p">[:,</span> <span class="n">queryMovie</span><span class="p">])</span>
+    <span class="c1">#print jokes[simVec.argsort()[::-1][:k]]</span>
+    <span class="n">sortedVec</span> <span class="o">=</span> <span class="n">simVec</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Top 5 Recommended movies are :</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">movies</span><span class="p">[</span><span class="n">sortedVec</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">__________________________________</span><span class="se">\n</span><span class="s1">&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[318]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">print_most_similar_movies</span><span class="p">(</span><span class="n">UR</span><span class="p">,</span> <span class="n">movie_names</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">pearsSim</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Selected movie: 
+
+Star Wars (1977)
+
+Top 5 Recommended movies are :
+
+Return of the Jedi (1983) 
+__________________________________
+
+Empire Strikes Back, The (1980) 
+__________________________________
+
+Raiders of the Lost Ark (1981) 
+__________________________________
+
+Indiana Jones and the Last Crusade (1989) 
+__________________________________
+
+Toy Story (1995) 
+__________________________________
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[317]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">print_most_similar_movies</span><span class="p">(</span><span class="n">UR</span><span class="p">,</span> <span class="n">movie_names</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">pearsSim</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Selected movie: 
+
+Forrest Gump (1994)
+
+Top 5 Recommended movies are :
+
+Apollo 13 (1995) 
+__________________________________
+
+E.T. the Extra-Terrestrial (1982) 
+__________________________________
+
+Dances with Wolves (1990) 
+__________________________________
+
+Raiders of the Lost Ark (1981) 
+__________________________________
+
+Dead Poets Society (1989) 
+__________________________________
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

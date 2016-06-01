@@ -176,12 +176,12 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># CSC478 Final Project</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1"># CSC478 Final Project Itembased app</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="kn">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 </pre></div>
 
 </div>
@@ -191,21 +191,21 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Load movieLens data</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1"># Load movieLens data</span>
 <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;F:\Computer science\csc478\csc478 Final\movielens\Movielens-02&#39;</span>
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.user&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="s2">&quot;gender&quot;</span><span class="p">,</span><span class="s2">&quot;job&quot;</span><span class="p">,</span><span class="s2">&quot;zip code&quot;</span><span class="p">])</span>
-<span class="n">movies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.item&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="s2">&quot;rl_date&quot;</span><span class="p">,</span><span class="s2">&quot;vrl_date&quot;</span><span class="p">,</span><span class="s2">&quot;url&quot;</span><span class="p">,</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.user&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="s2">&quot;gender&quot;</span><span class="p">,</span><span class="s2">&quot;job&quot;</span><span class="p">,</span><span class="s2">&quot;zip code&quot;</span><span class="p">])</span>
+<span class="n">movies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.item&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="s2">&quot;rl_date&quot;</span><span class="p">,</span><span class="s2">&quot;vrl_date&quot;</span><span class="p">,</span><span class="s2">&quot;url&quot;</span><span class="p">,</span>
                                                                  <span class="s2">&quot;unknown&quot;</span><span class="p">,</span><span class="s2">&quot;Action&quot;</span><span class="p">,</span><span class="s2">&quot;Adventure&quot;</span><span class="p">,</span><span class="s2">&quot;Animation&quot;</span><span class="p">,</span>
                                                                  <span class="s2">&quot;Children&#39;s &quot;</span><span class="p">,</span><span class="s2">&quot;Comedy&quot;</span><span class="p">,</span><span class="s2">&quot;Crime&quot;</span><span class="p">,</span><span class="s2">&quot;Documentary&quot;</span><span class="p">,</span>
                                                                  <span class="s2">&quot;Drama&quot;</span><span class="p">,</span><span class="s2">&quot;Fantasy&quot;</span><span class="p">,</span><span class="s2">&quot;Film-Noir&quot;</span><span class="p">,</span><span class="s2">&quot;Horror&quot;</span><span class="p">,</span>
                                                                  <span class="s2">&quot;Musical&quot;</span><span class="p">,</span><span class="s2">&quot;Mystery&quot;</span><span class="p">,</span><span class="s2">&quot;Romance&quot;</span><span class="p">,</span><span class="s2">&quot;Sci-Fi&quot;</span><span class="p">,</span>
                                                                  <span class="s2">&quot;Thriller&quot;</span><span class="p">,</span><span class="s2">&quot;War&quot;</span><span class="p">,</span><span class="s2">&quot;Western&quot;</span><span class="p">])</span>
-<span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.data&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">,</span><span class="s2">&quot;movie&quot;</span><span class="p">,</span><span class="s2">&quot;rating&quot;</span><span class="p">,</span><span class="s2">&quot;timestamp&quot;</span><span class="p">])</span>
-<span class="n">genres</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.genre&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;genre&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.data&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">,</span><span class="s2">&quot;movie&quot;</span><span class="p">,</span><span class="s2">&quot;rating&quot;</span><span class="p">,</span><span class="s2">&quot;timestamp&quot;</span><span class="p">])</span>
+<span class="n">genres</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.genre&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;genre&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -215,12 +215,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Users data overview</span>
-<span class="nb">print</span> <span class="n">users</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">users</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">npmovies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;u.item&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">npmovies</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
 </div>
@@ -231,1733 +242,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>   id  age gender         job zip code
-0   1   24      M  technician    85711
-1   2   53      F       other    94043
-2   3   23      M      writer    32067
-3   4   24      M  technician    43537
-4   5   33      F       other    15213
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>age</th>
-      <th>gender</th>
-      <th>job</th>
-      <th>zip code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>943.000000</td>
-      <td>943.000000</td>
-      <td>943</td>
-      <td>943</td>
-      <td>943</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2</td>
-      <td>21</td>
-      <td>795</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>M</td>
-      <td>student</td>
-      <td>55414</td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>670</td>
-      <td>196</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>472.000000</td>
-      <td>34.051962</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>272.364951</td>
-      <td>12.192740</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>7.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>236.500000</td>
-      <td>25.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>472.000000</td>
-      <td>31.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>707.500000</td>
-      <td>43.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>943.000000</td>
-      <td>73.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Distribution of user ages</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">users</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-dJ2IYTh8AAAAAElFTkSuQmCC
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Distribution of user genders</span>
-<span class="n">users</span><span class="o">.</span><span class="n">gender</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xadb45c0&gt;</pre>
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAD/CAYAAADhYy38AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
-AAALEgAACxIB0t1+/AAAD55JREFUeJzt3V+MnFd9xvHv4xgQaYu1avG6sgNJRZraVG1BwlGFKkai
-NQQk2xKSS3oDpH8uIhQuqsp2b7xcgdOLiormoipF28rgmiJK2qbYscK0aiUSIKGl2JhVK7vGYjcl
-aakgNzb8ejFv3MnG9s7GM9mds9+PNPKZM+ed9zeZ14/PnPedTKoKSdL027TWBUiSxsNAl6RGGOiS
-1AgDXZIaYaBLUiMMdElqxIqBnuRnkzyV5Mnuz+8leSDJTJJTSc4lOZlky9A2h5MsJDmbZM9kX4Ik
-CSCruQ49ySbg28DdwAeBZ6rqwSQHgZmqOpRkF3AMeAuwAzgN3Fle8C5JE7XaJZdfBf69qi4C+4D5
-rn8e2N+19wLHq+pKVZ0HFoDdY6hVknQDqw30Xwc+1bVnq2oJoKoWga1d/3bg4tA2l7o+SdIEjRzo
-SV7BYPb9ma5r+RKKSyqStIY2r2LsPcBXq+q73f2lJLNVtZRkG/B0138JuG1oux1d3wsk8R8ASXoJ
-qirX6l/Nksu9wKeH7j8MvL9rvw/4/FD/e5O8MskdwBuAJ65TlLcx3Y4cObLmNXjzdq2bx+Z4bzcy
-0gw9ya0MToj+zlD3UeBEkvuAC8CBLqTPJDkBnAEuA/fXSlVIkm7aSIFeVc8Br13W9yyDkL/W+I8A
-H7np6iRJI/Oboo3o9XprXYJ0TR6bL59VfbForDtOXImRpFVKQo3hpKgkaR0z0CWpEQa6JDXCQJek
-Rqzmm6Ib0rZtt7O0dGGty2jG7OzrWVw8v9ZlSE3yKpcVJMH/Tc04ZcVvu0m6Pq9ykaQNwECXpEYY
-6JLUCANdkhphoEtSIwx0SWqEgS5JjTDQJakRBrokNcJAl6RGGOiS1AgDXZIaYaBLUiMMdElqhIEu
-SY0YKdCTbEnymSRnk3wjyd1JZpKcSnIuyckkW4bGH06y0I3fM7nyJUnPG3WG/jHgkaraCfwi8E3g
-EHC6qu4CHgMOAyTZBRwAdgL3AA9l8CsRkqQJWjHQk7wG+JWq+iRAVV2pqu8B+4D5btg8sL9r7wWO
-d+POAwvA7nEXLkl6oVFm6HcA303yySRPJvmTJLcCs1W1BFBVi8DWbvx24OLQ9pe6PknSBI0S6JuB
-NwN/XFVvBn7AYLll+Q9D+kORkrSGNo8w5tvAxar6Snf/swwCfSnJbFUtJdkGPN09fgm4bWj7HV3f
-i8zNzV1t93o9er3eqoqXpNb1+336/f5IYzPKL7An+Qfgt6vqW0mOALd2Dz1bVUeTHARmqupQd1L0
-GHA3g6WWR4E7a9mOkizvWpcG53PXf53TI0zD+y6tV0moqmteaDLKDB3gAeBYklcA/wF8ALgFOJHk
-PuACgytbqKozSU4AZ4DLwP1TkdySNOVGmqFPZMfO0DcoZ+jSzbjRDN1vikpSIwx0SWqEgS5JjTDQ
-JakRBrokNcJAl6RGGOiS1AgDXZIaYaBLUiMMdElqhIEuSY0w0CWpEQa6JDXCQJekRhjoktQIA12S
-GmGgS1IjDHRJaoSBLkmNMNAlqREGuiQ1wkCXpEYY6JLUiJECPcn5JP+S5KkkT3R9M0lOJTmX5GSS
-LUPjDydZSHI2yZ5JFS9J+n+jztB/BPSq6k1VtbvrOwScrqq7gMeAwwBJdgEHgJ3APcBDSTLesiVJ
-y40a6LnG2H3AfNeeB/Z37b3A8aq6UlXngQVgN5KkiRo10At4NMmXk/xW1zdbVUsAVbUIbO36twMX
-h7a91PVJkiZo84jj3lpV30nyWuBUknMMQn7Y8vuSpJfRSIFeVd/p/vyvJH/NYAllKclsVS0l2QY8
-3Q2/BNw2tPmOru9F5ubmrrZ7vR69Xm+19UtS0/r9Pv1+f6SxqbrxxDrJrcCmqvp+kh8DTgEfBt4O
-PFtVR5McBGaq6lB3UvQYcDeDpZZHgTtr2Y6SLO9alwbnc9d/ndMjTMP7Lq1XSaiqa15oMsoMfRb4
-XJLqxh+rqlNJvgKcSHIfcIHBlS1U1ZkkJ4AzwGXg/qlIbkmacivO0Ce2Y2foG5QzdOlm3GiG7jdF
-JakRBrokNcJAl6RGGOiS1AgDXZIaYaBLUiMMdElqhIEuSY0w0CWpEQa6JDXCQJekRhjoktQIA12S
-GmGgS1IjDHRJaoSBLkmNMNAlqREGuiQ1wkCXpEYY6JLUCANdkhphoEtSIwx0SWrEyIGeZFOSJ5M8
-3N2fSXIqybkkJ5NsGRp7OMlCkrNJ9kyicEnSC61mhv4h4MzQ/UPA6aq6C3gMOAyQZBdwANgJ3AM8
-lCTjKVeSdD0jBXqSHcC7gD8d6t4HzHfteWB/194LHK+qK1V1HlgAdo+lWknSdY06Q/9D4PeAGuqb
-raolgKpaBLZ2/duBi0PjLnV9kqQJWjHQk7wbWKqqrwE3WjqpGzwmSZqwzSOMeSuwN8m7gFcDP5Hk
-L4DFJLNVtZRkG/B0N/4ScNvQ9ju6vheZm5u72u71evR6vVW/AElqWb/fp9/vjzQ2VaNPrJO8Dfjd
-qtqb5EHgmao6muQgMFNVh7qToseAuxkstTwK3FnLdpRkede6NDifu/7rnB5hGt53ab1KQlVdc7Vk
-lBn69XwUOJHkPuACgytbqKozSU4wuCLmMnD/VCS3JE25Vc3Qx7pjZ+gblDN06WbcaIbuN0UlqREG
-uiQ1wkCXpEYY6JLUCANdkhphoEtSIwx0SWqEgS5JjTDQJakRBrokNcJAl6RGGOiS1AgDXZIaYaBL
-UiMMdElqhIEuSY0w0CWpEQa6JDXCQJekRhjoktQIA12SGmGgS1IjDHRJasSKgZ7kVUkeT/JUkq8n
-OdL1zyQ5leRckpNJtgxtczjJQpKzSfZM8gVIkgZSVSsPSm6tqueS3AL8M/AA8B7gmap6MMlBYKaq
-DiXZBRwD3gLsAE4Dd9ayHSVZ3rUuJQHWf53TI0zD+y6tV0moqlzrsZGWXKrqua75KmAzg4TbB8x3
-/fPA/q69FzheVVeq6jywAOx+aaVLkkY1UqAn2ZTkKWAReLSqvgzMVtUSQFUtAlu74duBi0ObX+r6
-JEkTNOoM/UdV9SYGSyi7k7yRF69D+DlaktbQ5tUMrqr/TdIH3gksJZmtqqUk24Cnu2GXgNuGNtvR
-9b3I3Nzc1Xav16PX662mHElqXr/fp9/vjzR2xZOiSX4KuFxV30vyauAk8FHgbcCzVXX0OidF72aw
-1PIonhTVVZ4UlW7GjU6KjjJD/2lgPskmBks0f1lVjyT5EnAiyX3ABeAAQFWdSXICOANcBu6fiuSW
-pCk30mWLE9mxM/QNyhm6dDNu+rJFSdL6Z6BLUiMMdElqhIEuSY1Y1XXoktaXbdtuZ2npwlqX0YTZ
-2dezuHh+rcu4KV7lsgKvchk3r3IZJ4/PcZqOY9OrXCRpAzDQJakRBrokNcJAl6RGGOiS1AgDXZIa
-YaBLUiMMdElqhIEuSY0w0CWpEQa6JDXCQJekRhjoktQIA12SGmGgS1IjDHRJaoSBLkmNWDHQk+xI
-8liSbyT5epIHuv6ZJKeSnEtyMsmWoW0OJ1lIcjbJnkm+AEnSwIo/QZdkG7Ctqr6W5MeBrwL7gA8A
-z1TVg0kOAjNVdSjJLuAY8BZgB3AauHP57835E3Qb1XT8zNe08Pgcp+k4Nm/qJ+iqarGqvta1vw+c
-ZRDU+4D5btg8sL9r7wWOV9WVqjoPLAC7b+oVSJJWtKo19CS3A78EfAmYraolGIQ+sLUbth24OLTZ
-pa5PkjRBm0cd2C23/BXwoar6fpLln01W/Vllbm7uarvX69Hr9Vb7FJLUtH6/T7/fH2nsimvoAEk2
-A38L/H1VfazrOwv0qmqpW2f/YlXtTHIIqKo62o37AnCkqh5f9pyuoW9I07FOOS08PsdpOo7Nm1pD
-7/wZcOb5MO88DLy/a78P+PxQ/3uTvDLJHcAbgCdWXbUkaVVGucrlrcA/Al9nMBUo4PcZhPQJ4Dbg
-AnCgqv6n2+Yw8JvAZQZLNKeu8bzO0Dek6ZgFTQuPz3GajmPzRjP0kZZcJsFA36im4y/NtPD4HKfp
-ODbHseQiSVrnDHRJaoSBLkmNMNAlqREGuiQ1wkCXpEYY6JLUCANdkhphoEtSIwx0SWqEgS5JjTDQ
-JakRBrokNcJAl6RGGOiS1AgDXZIaYaBLUiMMdElqhIEuSY0w0CWpEQa6JDXCQJekRhjoktSIFQM9
-ySeSLCX516G+mSSnkpxLcjLJlqHHDidZSHI2yZ5JFS5JeqFRZuifBN6xrO8QcLqq7gIeAw4DJNkF
-HAB2AvcADyXJ+MqVJF3PioFeVf8E/Pey7n3AfNeeB/Z37b3A8aq6UlXngQVg93hKlSTdyEtdQ99a
-VUsAVbUIbO36twMXh8Zd6vokSRO2eUzPUy9lo7m5uavtXq9Hr9cbUzmS1IZ+v0+/3x9pbKpWzuIk
-rwf+pqp+obt/FuhV1VKSbcAXq2pnkkNAVdXRbtwXgCNV9fg1nrNG2fdaG5wCWP91To8wDe/7tPD4
-HKfpODaTUFXXPDc56pJLutvzHgbe37XfB3x+qP+9SV6Z5A7gDcATq65YkrRqKy65JPkU0AN+Msl/
-AkeAjwKfSXIfcIHBlS1U1ZkkJ4AzwGXg/qmYhktSA0ZacpnIjl1y2aCm42PttPD4HKfpODbHseQi
-SVrnDHRJaoSBLkmNMNAlqREGuiQ1wkCXpEYY6JLUCANdkhphoEtSIwx0SWqEgS5JjTDQJakRBrok
-NcJAl6RGGOiS1AgDXZIaYaBLUiMMdElqhIEuSY0w0CWpEQa6JDXCQJekRkws0JO8M8k3k3wrycFJ
-7UeSNDCRQE+yCfg48A7gjcC9SX5uEvvS8/prXYB0Hf21LmDDmNQMfTewUFUXquoycBzYN6F9CfAv
-jdav/loXsGFMKtC3AxeH7n+765MkTYgnRSWpEZsn9LyXgNcN3d/R9b1Akgntftympc4Pr3UBI5me
-931aTMN/T4/Nl0OqavxPmtwCnAPeDnwHeAK4t6rOjn1nkiRgQjP0qvphkg8Cpxgs63zCMJekyZrI
-DF2S9PLzpKgkNcJAl6RGGOiSxibJ61YepUlxDX0KJXn4Ro9X1d6XqxZpWJInq+rNXfuzVfWeta5p
-I5nUdeiarF9m8E3cTwOPMx0XImtjGD4Wf2bNqtigDPTptA34NeBe4DeAvwM+XVXfWNOqJKjrtPUy
-cMllyiV5FYNg/wPgw1X18TUuSRtYkh8CP2AwU3818NzzDwFVVa9Zq9o2AmfoU6oL8nczCPPbgT8C
-PreWNUlVdcta17CROUOfQkn+HPh54BHgeFX92xqXJGkdMNCnUJIfMfhYCy9cp/RjrbSBGeiS1Ai/
-WCRJjTDQJakRBrokNcJAl6RGGOiS1Ij/A+YOlvdFxBTLAAAAAElFTkSuQmCC
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Distribution of user professions</span>
-<span class="n">users</span><span class="o">.</span><span class="n">job</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xad2c668&gt;</pre>
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAE+CAYAAACdoOtZAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
-AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XmcZGV1//HPlxlZFAZRgVFZJYgQFUTZUSEq0WBEI+KC
-/hQ1MWoUcYUYZXAJYkRjNCbGBVEhAmIEjCCLDotssoMsYhREkNEYZEe28/vjPDVd3VPddW/d6uqa
-29/361Wvmbrdp+/t7upTz32W8ygiMDOzld8qc30BZmY2HE7oZmYt4YRuZtYSTuhmZi3hhG5m1hJO
-6GZmLdE3oUvaQNIPJf1U0pWS3lmOryPpVEnXSfqBpLW7Yg6SdL2kayTtMZvfgJmZJfWbhy5pMbA4
-Ii6TtCZwMbAXsB/w+4j4pKQPAOtExIGStgKOArYDNgBOBzYPT3g3M5tVfVvoEXFrRFxW/n8XcA2Z
-qPcCjiyfdiTw0vL/lwDfiogHI+IG4Hpg+yFft5mZTVGrD13SJsA2wPnA+hGxDDLpA+uVT3sicFNX
-2M3lmJmZzaLKCb10t3wb2L+01Kd2obhLxcxsDi2s8kmSFpLJ/BsRcUI5vEzS+hGxrPSz/7YcvxnY
-sCt8g3Js6tf0G4CZ2QAiQr2OV22hfxW4OiI+23XsROAN5f+vB07oOv4qSatK2hT4E+DCaS5q2sfB
-Bx8848f7PRzveMevfOd2fP/4mfRtoUvaBdgXuFLSpWTXyt8DhwHHSnojcCOwT0nSV0s6FrgaeAB4
-W/S7CjMza6xvQo+IHwMLpvnw86eJORQ4tMF1mZlZTWOzUnTx4k2QtPxxyCGHTHq+ePEmtb7ebrvt
-1uh6HO/4+Rq/Ml/7fI/vu7Botkia1BMjiZknyqhv/5GZWdtJIhoOipqZ2ZhzQjczawkndDOzlnBC
-NzNrCSd0M7OWcEI3M2sJJ3Qzs5ZwQjczawkndDOzlnBCNzNrCSd0M7OWcEI3M2sJJ3Qzs5ZwQjcz
-awkndDOzlnBCNzNrCSd0M7OWcEI3M2sJJ3Qzs5ZwQjczawkndDOzlnBCNzNrCSd0M7OWcEI3M2sJ
-J3Qzs5ZwQjczawkndDOzlnBCNzNrCSd0M7OWcEI3M2sJJ3Qzs5ZwQjczawkndDOzlnBCNzNrCSd0
-M7OWcEI3M2sJJ3Qzs5ZwQjczawkndDOzlnBCNzNrCSd0M7OWcEI3M2sJJ3Qzs5ZwQjczawkndDOz
-luib0CV9RdIySVd0HTtY0q8lXVIeL+z62EGSrpd0jaQ9ZuvCzcxssiot9COAP+9x/NMRsW15nAIg
-aUtgH2BL4EXAFyRpaFdrZmbT6pvQI+Ic4LYeH+qVqPcCvhURD0bEDcD1wPaNrtDMzCpp0of+d5Iu
-k/RlSWuXY08Ebur6nJvLMTMzm2WDJvQvAE+KiG2AW4HDh3dJZmY2iIWDBEXE77qefgk4qfz/ZmDD
-ro9tUI71tGTJkkFOb2Y2byxdupSlS5dW+lxFRP9PkjYBToqIp5XniyPi1vL/A4DtIuI1krYCjgJ2
-ILtaTgM2jx4nkTTpcI6dznQtosq1mpm1mSQioudkk74tdElHA7sBj5X0K+BgYHdJ2wAPAzcAbwGI
-iKslHQtcDTwAvK1XMjczs+Gr1EKflRO7hW5mVttMLXSvFDUzawkndDOzlnBCNzNrCSd0M7OWcEI3
-M2sJJ3Qzs5ZwQjczawkndDOzlnBCNzNrCSd0M7OWcEI3M2sJJ3Qzs5ZwQjczawkndDOzlnBCNzNr
-CSd0M7OWcEI3M2sJJ3Qzs5ZwQjczawkndDOzlnBCNzNrCSd0M7OWcEI3M2sJJ3Qzs5ZwQjczawkn
-dDOzlnBCNzNrCSd0M7OWcEI3M2sJJ3Qzs5ZwQjczawkndDOzlnBCNzNrCSd0M7OWcEI3M2sJJ3Qz
-s5ZwQjczawkndDOzlnBCNzNrCSd0M7OWcEI3M2sJJ3Qzs5ZwQjczawkndDOzlnBCNzNrCSd0M7OW
-aE1CX7x4EyRN+1i8eJO5vkQzs1nVN6FL+oqkZZKu6Dq2jqRTJV0n6QeS1u762EGSrpd0jaQ9ZuvC
-p1q27EYgpn3kx83M2qtKC/0I4M+nHDsQOD0itgB+CBwEIGkrYB9gS+BFwBckaXiXa2Zm0+mb0CPi
-HOC2KYf3Ao4s/z8SeGn5/0uAb0XEgxFxA3A9sP1wLtXMzGYyaB/6ehGxDCAibgXWK8efCNzU9Xk3
-l2NmZjbLFg7p68QgQUuWLBnS6c3M2mnp0qUsXbq00ucqon8ulrQxcFJEPL08vwbYLSKWSVoM/Cgi
-tpR0IBARcVj5vFOAgyPigh5fM7rPnV3tM12LmOlam8abma0MJBERPccmq3a5qDw6TgTeUP7/euCE
-ruOvkrSqpE2BPwEurH3FZmZWW98uF0lHA7sBj5X0K+Bg4BPAcZLeCNxIzmwhIq6WdCxwNfAA8LZw
-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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># 0: id, 1: name, 2: relase date, 3: video release date, 4: url, 5-23: genre</span>
-<span class="c1"># Movie data</span>
-<span class="n">movies</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>title</th>
-      <th>rl_date</th>
-      <th>vrl_date</th>
-      <th>url</th>
-      <th>unknown</th>
-      <th>Action</th>
-      <th>Adventure</th>
-      <th>Animation</th>
-      <th>Children's</th>
-      <th>...</th>
-      <th>Fantasy</th>
-      <th>Film-Noir</th>
-      <th>Horror</th>
-      <th>Musical</th>
-      <th>Mystery</th>
-      <th>Romance</th>
-      <th>Sci-Fi</th>
-      <th>Thriller</th>
-      <th>War</th>
-      <th>Western</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>Toy Story (1995)</td>
-      <td>01-Jan-1995</td>
-      <td>NaN</td>
-      <td>http://us.imdb.com/M/title-exact?Toy%20Story%2...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>GoldenEye (1995)</td>
-      <td>01-Jan-1995</td>
-      <td>NaN</td>
-      <td>http://us.imdb.com/M/title-exact?GoldenEye%20(...</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Four Rooms (1995)</td>
-      <td>01-Jan-1995</td>
-      <td>NaN</td>
-      <td>http://us.imdb.com/M/title-exact?Four%20Rooms%...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Get Shorty (1995)</td>
-      <td>01-Jan-1995</td>
-      <td>NaN</td>
-      <td>http://us.imdb.com/M/title-exact?Get%20Shorty%...</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Copycat (1995)</td>
-      <td>01-Jan-1995</td>
-      <td>NaN</td>
-      <td>http://us.imdb.com/M/title-exact?Copycat%20(1995)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 24 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Movie data overview</span>
-<span class="n">movies</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>title</th>
-      <th>rl_date</th>
-      <th>vrl_date</th>
-      <th>url</th>
-      <th>unknown</th>
-      <th>Action</th>
-      <th>Adventure</th>
-      <th>Animation</th>
-      <th>Children's</th>
-      <th>...</th>
-      <th>Fantasy</th>
-      <th>Film-Noir</th>
-      <th>Horror</th>
-      <th>Musical</th>
-      <th>Mystery</th>
-      <th>Romance</th>
-      <th>Sci-Fi</th>
-      <th>Thriller</th>
-      <th>War</th>
-      <th>Western</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>1682.000000</td>
-      <td>1682</td>
-      <td>1681</td>
-      <td>0</td>
-      <td>1679</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>...</td>
-      <td>1682.00000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-      <td>1682.000000</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>NaN</td>
-      <td>1664</td>
-      <td>240</td>
-      <td>NaN</td>
-      <td>1660</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>NaN</td>
-      <td>Money Talks (1997)</td>
-      <td>01-Jan-1995</td>
-      <td>NaN</td>
-      <td>http://us.imdb.com/Title?Sliding+Doors+(1998)</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>NaN</td>
-      <td>2</td>
-      <td>215</td>
-      <td>NaN</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>841.500000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.001189</td>
-      <td>0.149227</td>
-      <td>0.080262</td>
-      <td>0.024970</td>
-      <td>0.072533</td>
-      <td>...</td>
-      <td>0.01308</td>
-      <td>0.014269</td>
-      <td>0.054697</td>
-      <td>0.033294</td>
-      <td>0.036266</td>
-      <td>0.146849</td>
-      <td>0.060048</td>
-      <td>0.149227</td>
-      <td>0.042212</td>
-      <td>0.016052</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>485.695893</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.034473</td>
-      <td>0.356418</td>
-      <td>0.271779</td>
-      <td>0.156081</td>
-      <td>0.259445</td>
-      <td>...</td>
-      <td>0.11365</td>
-      <td>0.118632</td>
-      <td>0.227455</td>
-      <td>0.179456</td>
-      <td>0.187008</td>
-      <td>0.354061</td>
-      <td>0.237646</td>
-      <td>0.356418</td>
-      <td>0.201131</td>
-      <td>0.125714</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.00000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>421.250000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.00000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>841.500000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.00000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>1261.750000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.00000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>1682.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>...</td>
-      <td>1.00000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-<p>11 rows × 24 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Rating data overview</span>
-<span class="nb">print</span> <span class="n">ratings</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">ratings</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>   user  movie  rating  timestamp
-0   196    242       3  881250949
-1   186    302       3  891717742
-2    22    377       1  878887116
-3   244     51       2  880606923
-4   166    346       1  886397596
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>user</th>
-      <th>movie</th>
-      <th>rating</th>
-      <th>timestamp</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>100000.00000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>1.000000e+05</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>462.48475</td>
-      <td>425.530130</td>
-      <td>3.529860</td>
-      <td>8.835289e+08</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>266.61442</td>
-      <td>330.798356</td>
-      <td>1.125674</td>
-      <td>5.343856e+06</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.00000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>8.747247e+08</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>254.00000</td>
-      <td>175.000000</td>
-      <td>3.000000</td>
-      <td>8.794487e+08</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>447.00000</td>
-      <td>322.000000</td>
-      <td>4.000000</td>
-      <td>8.828269e+08</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>682.00000</td>
-      <td>631.000000</td>
-      <td>4.000000</td>
-      <td>8.882600e+08</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>943.00000</td>
-      <td>1682.000000</td>
-      <td>5.000000</td>
-      <td>8.932866e+08</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Distribution of movie ratings(for different movies)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">ratings</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Genres of movie</span>
-<span class="nb">print</span> <span class="n">genres</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">genres</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>        genre  id
-0     unknown   0
-1      Action   1
-2   Adventure   2
-3   Animation   3
-4  Children&apos;s   4
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>genre</th>
-      <th>id</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>19</td>
-      <td>19.000000</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>19</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>Thriller</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>1</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>NaN</td>
-      <td>9.000000</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>NaN</td>
-      <td>5.627314</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>NaN</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>NaN</td>
-      <td>4.500000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>NaN</td>
-      <td>9.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>NaN</td>
-      <td>13.500000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>NaN</td>
-      <td>18.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Correlation analysis</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">users</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>age</th>
-      <th>gender</th>
-      <th>job</th>
-      <th>zip code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>24</td>
-      <td>M</td>
-      <td>technician</td>
-      <td>85711</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>53</td>
-      <td>F</td>
-      <td>other</td>
-      <td>94043</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>23</td>
-      <td>M</td>
-      <td>writer</td>
-      <td>32067</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>24</td>
-      <td>M</td>
-      <td>technician</td>
-      <td>43537</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>33</td>
-      <td>F</td>
-      <td>other</td>
-      <td>15213</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">rates</span> <span class="o">=</span> <span class="n">ratings</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>e:\Anaconda2\lib\site-packages\ipykernel\__main__.py:1: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
-  if __name__ == &apos;__main__&apos;:
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">r2</span> <span class="o">=</span><span class="n">ratings</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>r2</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">r2</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">rates</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>user</th>
-      <th>movie</th>
-      <th>rating</th>
-      <th>timestamp</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>66567</th>
-      <td>1</td>
-      <td>55</td>
-      <td>5</td>
-      <td>875072688</td>
-    </tr>
-    <tr>
-      <th>62820</th>
-      <td>1</td>
-      <td>203</td>
-      <td>4</td>
-      <td>878542231</td>
-    </tr>
-    <tr>
-      <th>10207</th>
-      <td>1</td>
-      <td>183</td>
-      <td>5</td>
-      <td>875072262</td>
-    </tr>
-    <tr>
-      <th>9971</th>
-      <td>1</td>
-      <td>150</td>
-      <td>5</td>
-      <td>876892196</td>
-    </tr>
-    <tr>
-      <th>22496</th>
-      <td>1</td>
-      <td>68</td>
-      <td>4</td>
-      <td>875072688</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">npmovies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;u.item&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">npmovies</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[44]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -1972,10 +257,10 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">=</span><span class="p">[]</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">npuser</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;u.user&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1985,36 +270,10 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">b</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">a</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">npuser</span>
 </pre></div>
 
 </div>
@@ -2025,49 +284,7 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[75]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[[1, 2, 3]]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">npuser</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;u.user&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">npuser</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[77]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2089,10 +306,10 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="c1">#list1=ratelist(npratings,npmovies,npuser)</span>
 </pre></div>
 
 </div>
@@ -2102,23 +319,10 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1">#list1=ratelist(npratings,npmovies,npuser)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">rating_mat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">)))</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">rating_mat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">)))</span>
 <span class="n">rating_mat</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
@@ -2130,7 +334,7 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[121]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2145,10 +349,10 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ratings</span><span class="p">)):</span>
+<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ratings</span><span class="p">)):</span>
     <span class="n">user</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">user</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="mi">1</span>
     <span class="n">movie</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">movie</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="mi">1</span>
     <span class="n">rating</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">rating</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
@@ -2162,10 +366,10 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">rating_mat</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">rating_mat</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
 </div>
@@ -2176,42 +380,7 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[123]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[ 5.,  3.,  4., ...,  0.,  0.,  0.],
-       [ 4.,  0.,  0., ...,  0.,  0.,  0.],
-       [ 0.,  0.,  0., ...,  0.,  0.,  0.],
-       ..., 
-       [ 5.,  0.,  0., ...,  0.,  0.,  0.],
-       [ 0.,  0.,  0., ...,  0.,  0.,  0.],
-       [ 0.,  5.,  0., ...,  0.,  0.,  0.]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">rating_mat</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[124]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2226,15 +395,15 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pylab</span> <span class="k">as</span> <span class="nn">pl</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="o">.</span><span class="n">cluster</span> <span class="kn">import</span> <span class="nn">KMeans</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">preprocessing</span>
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pylab</span> <span class="kn">as</span> <span class="nn">pl</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="nn">.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
 
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">metrics</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
 </pre></div>
 
 </div>
@@ -2244,24 +413,10 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">min_max_scaler</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">MinMaxScaler</span><span class="p">()</span>
-<span class="n">ratMat</span> <span class="o">=</span> <span class="n">min_max_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[152]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">rating_mat</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">rating_mat</span>
 </pre></div>
 
 </div>
@@ -2272,7 +427,7 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[152]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2293,12 +448,12 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[183]:</div>
+<div class="prompt input_prompt">In&nbsp;[151]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">la</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">la</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">ecludSim</span><span class="p">(</span><span class="n">inA</span><span class="p">,</span><span class="n">inB</span><span class="p">):</span>
     <span class="k">return</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inA</span> <span class="o">-</span> <span class="n">inB</span><span class="p">))</span>
@@ -2311,6 +466,8 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
     <span class="n">num</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">inA</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">inB</span><span class="p">)</span>
     <span class="n">denom</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inA</span><span class="p">)</span><span class="o">*</span><span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inB</span><span class="p">)</span>
     <span class="k">return</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">num</span> <span class="o">/</span> <span class="n">denom</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">cosSim2</span><span class="p">(</span><span class="n">vecA</span><span class="p">,</span><span class="n">vecB</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">vecA</span><span class="p">,</span> <span class="n">vecB</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vecA</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vecB</span><span class="p">)</span> <span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">standEst</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
@@ -2329,33 +486,9 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
     <span class="k">if</span> <span class="n">simTotal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">ratSimTotal</span><span class="o">/</span><span class="n">simTotal</span>
     
-<span class="k">def</span> <span class="nf">svdEst</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">simTotal</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span> <span class="n">ratSimTotal</span> <span class="o">=</span> <span class="mf">0.0</span>
-    <span class="n">data</span><span class="o">=</span><span class="n">mat</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)</span>
-    <span class="n">U</span><span class="p">,</span><span class="n">Sigma</span><span class="p">,</span><span class="n">VT</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">Sig4</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">Sigma</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span> <span class="c1">#arrange Sig4 into a diagonal matrix</span>
-    <span class="n">xformedItems</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">U</span><span class="p">[:,:</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">Sig4</span><span class="o">.</span><span class="n">I</span>  <span class="c1">#create transformed items</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">userRating</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">user</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">userRating</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span><span class="o">==</span><span class="n">item</span><span class="p">:</span> <span class="k">continue</span>
-        <span class="n">similarity</span> <span class="o">=</span> <span class="n">simMeas</span><span class="p">(</span><span class="n">xformedItems</span><span class="p">[</span><span class="n">item</span><span class="p">,:]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>\
-                             <span class="n">xformedItems</span><span class="p">[</span><span class="n">j</span><span class="p">,:]</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-        <span class="c1">#print &#39;the %d and %d similarity is: %f&#39; % (item, j, similarity)</span>
-        <span class="n">simTotal</span> <span class="o">+=</span> <span class="n">similarity</span>
-        <span class="n">ratSimTotal</span> <span class="o">+=</span> <span class="n">similarity</span> <span class="o">*</span> <span class="n">userRating</span>
-    <span class="k">if</span> <span class="n">simTotal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">ratSimTotal</span><span class="o">/</span><span class="n">simTotal</span>
 
-<span class="c1"># This function is not needed for Assignment 4, but may be useful for experimentation</span>
-<span class="k">def</span> <span class="nf">recommend</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">simMeas</span><span class="o">=</span><span class="n">cosSim</span><span class="p">,</span> <span class="n">estMethod</span><span class="o">=</span><span class="n">standEst</span><span class="p">):</span>
-    <span class="n">unratedItems</span> <span class="o">=</span> <span class="n">nonzero</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">,:]</span><span class="o">.</span><span class="n">A</span><span class="o">==</span><span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#find unrated items </span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unratedItems</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="s1">&#39;you rated everything&#39;</span>
-    <span class="n">itemScores</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">unratedItems</span><span class="p">:</span>
-        <span class="n">estimatedScore</span> <span class="o">=</span> <span class="n">estMethod</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
-        <span class="n">itemScores</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">item</span><span class="p">,</span> <span class="n">estimatedScore</span><span class="p">))</span>
-    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">itemScores</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">jj</span><span class="p">:</span> <span class="n">jj</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="n">N</span><span class="p">]</span>
+
+
 
 <span class="c1"># This function performs cross-validation on a single user based on the test_ratio</span>
 <span class="c1"># For example, with test_ratio = 0.2, 5-fold x-validation is performed where in each fold, </span>
@@ -2387,23 +520,32 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 
 
 
-<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">MData</span><span class="p">,</span> <span class="n">testRatio</span><span class="p">,</span> <span class="n">method</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">MData</span><span class="p">,</span> <span class="n">testRatio</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span><span class="n">simMethod</span><span class="p">):</span>
     <span class="n">totalerror</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">MData</span><span class="p">)):</span>
         
-        <span class="n">error</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="n">cross_validate_user</span><span class="p">(</span><span class="n">MData</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">testRatio</span><span class="p">,</span> <span class="n">estMethod</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+        <span class="n">error</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="n">cross_validate_user</span><span class="p">(</span><span class="n">MData</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">testRatio</span><span class="p">,</span> <span class="n">estMethod</span><span class="o">=</span><span class="n">method</span><span class="p">,</span><span class="n">simMeas</span><span class="o">=</span><span class="n">simMethod</span><span class="p">)</span>
+        
         <span class="n">totalerror</span> <span class="o">+=</span> <span class="n">error</span>
         <span class="n">total</span> <span class="o">+=</span> <span class="n">count</span>
     <span class="n">MAE</span> <span class="o">=</span> <span class="n">totalerror</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="s1">&#39;Mean Absoloute Error for &#39;</span><span class="p">,</span><span class="n">method</span><span class="p">,</span><span class="s1">&#39; : &#39;</span><span class="p">,</span> <span class="n">MAE</span>
+    <span class="k">print</span> <span class="s1">&#39;Mean Absoloute Error for &#39;</span><span class="p">,</span><span class="n">method</span><span class="p">,</span><span class="s1">&#39; : &#39;</span><span class="p">,</span> <span class="n">MAE</span>
 
-
+<span class="k">def</span> <span class="nf">test1</span><span class="p">(</span><span class="n">MData</span><span class="p">,</span> <span class="n">testRatio</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span><span class="n">simMethod</span><span class="p">):</span>
+    <span class="n">totalerror</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">MData</span><span class="p">)):</span>
+        
+        <span class="n">error</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="n">cross_validate_user</span><span class="p">(</span><span class="n">MData</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">testRatio</span><span class="p">,</span> <span class="n">estMethod</span><span class="o">=</span><span class="n">method</span><span class="p">,</span><span class="n">simMeas</span><span class="o">=</span><span class="n">simMethod</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">isnan</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="n">totalerror</span> <span class="o">+=</span> <span class="n">error</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">count</span>
+    <span class="n">MAE</span> <span class="o">=</span> <span class="n">totalerror</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s1">&#39;Mean Absoloute Error for &#39;</span><span class="p">,</span><span class="n">method</span><span class="p">,</span><span class="s1">&#39; : &#39;</span><span class="p">,</span> <span class="n">MAE</span>
     
-<span class="k">def</span> <span class="nf">load_jokes</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
-    <span class="n">jokes</span> <span class="o">=</span> <span class="n">genfromtxt</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
-    <span class="n">jokes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">jokes</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">jokes</span>
+
 
 <span class="k">def</span> <span class="nf">get_mv_text</span><span class="p">(</span><span class="n">movie</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">movie</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span>
@@ -2416,10 +558,23 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[271]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">test</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">standEst</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1"># Mean absoloute for cosine simalarity</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">test</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">standEst</span><span class="p">,</span><span class="n">cosSim2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2432,43 +587,18 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mean Absoloute Error for  &lt;function standEst at 0x000000000E5ADF28&gt;  :  nan
+<pre>Mean Absoloute Error for  &lt;function standEst at 0x000000000D952DD8&gt;  :  0.829079195273
 </pre>
 </div>
 </div>
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>e:\Anaconda2\lib\site-packages\ipykernel\__main__.py:67: DeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+<pre>e:\Anaconda2\lib\site-packages\ipykernel\__main__.py:69: DeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
 </pre>
 </div>
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">print_most_similar_movies</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">querymovie</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
-    <span class="n">mv</span> <span class="o">=</span> <span class="n">get_mv_text</span><span class="p">(</span><span class="n">movie</span><span class="p">,</span> <span class="n">querymovie</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="s1">&#39;Selected Movie: </span><span class="se">\n</span><span class="s1">&#39;</span>
-    <span class="nb">print</span> <span class="n">mv</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
-    
-    <span class="n">simMovie</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">querymovie</span><span class="p">:</span>
-            <span class="n">simMovie</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[:,</span><span class="n">i</span><span class="p">],</span> <span class="n">dataMat</span><span class="p">[:,</span> <span class="n">querymovie</span><span class="p">])</span>
-    <span class="n">sortedVec</span> <span class="o">=</span> <span class="n">simMovie</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Top 5 Recommended movies are :</span><span class="se">\n</span><span class="s1">&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-        <span class="nb">print</span> <span class="n">movie</span><span class="p">[</span><span class="n">sortedVec</span><span class="p">[</span><span class="n">i</span><span class="p">]][:</span><span class="mi">5</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">_______________</span><span class="se">\n</span><span class="s1">&#39;</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
@@ -2478,7 +608,126 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Count Knn by pearsSim, then recommand the most sim n.</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1">#MAE for ecludSim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">test</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">standEst</span><span class="p">,</span><span class="n">ecludSim</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Mean Absoloute Error for  &lt;function standEst at 0x000000000D952DD8&gt;  :  0.834439256357
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>e:\Anaconda2\lib\site-packages\ipykernel\__main__.py:69: DeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c1">#MAE for pearsSim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">test1</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">standEst</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Mean Absoloute Error for  &lt;function standEst at 0x000000000D952DD8&gt;  :  0.816964270507
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>e:\Anaconda2\lib\site-packages\ipykernel\__main__.py:69: DeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">print_most_similar_movies</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">querymovie</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+    <span class="n">mv</span> <span class="o">=</span> <span class="n">get_mv_text</span><span class="p">(</span><span class="n">movie</span><span class="p">,</span> <span class="n">querymovie</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s1">&#39;Selected Movie: </span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="k">print</span> <span class="n">mv</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+    
+    <span class="n">simMovie</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">querymovie</span><span class="p">:</span>
+            <span class="n">simMovie</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[:,</span><span class="n">i</span><span class="p">],</span> <span class="n">dataMat</span><span class="p">[:,</span> <span class="n">querymovie</span><span class="p">])</span>
+    <span class="n">sortedVec</span> <span class="o">=</span> <span class="n">simMovie</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Top 5 Recommended movies are :</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">movie</span><span class="p">[</span><span class="n">sortedVec</span><span class="p">[</span><span class="n">i</span><span class="p">]][:</span><span class="mi">5</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">_______________</span><span class="se">\n</span><span class="s1">&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c1"># Count Knn by pearsSim, then recommand the most sim n.</span>
 <span class="c1"># The sim is based on the movoe&#39;s rating</span>
 </pre></div>
 
@@ -2489,10 +738,10 @@ ZEhIkpoMCUlS0/8HiCC++gIGGcwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[222]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> <span class="n">print_most_similar_movies</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre> <span class="n">print_most_similar_movies</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2542,10 +791,10 @@ _______________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">unratedMovies</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movies</span><span class="p">,</span><span class="n">datamat</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">unratedMovies</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movies</span><span class="p">,</span><span class="n">datamat</span><span class="p">):</span>
     <span class="n">unrated</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">datamat</span><span class="p">[</span><span class="n">userId</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
@@ -2560,10 +809,10 @@ _______________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[279]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Predict all unrated movie for a user</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1"># Predict all unrated movie for a user</span>
 <span class="c1"># predict based by that user &#39;s rating on most similiar movies</span>
 <span class="k">def</span> <span class="nf">PredictRateForUser</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
     <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
@@ -2582,7 +831,7 @@ _______________
             <span class="k">if</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
                 <span class="n">t</span> <span class="o">=</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
                 <span class="k">break</span>
-        <span class="nb">print</span> <span class="s2">&quot;Predict rating for user # </span><span class="si">%d</span><span class="s2"> movie: </span><span class="si">%s</span><span class="s2"> is: </span><span class="si">%d</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movie</span><span class="p">[</span><span class="n">querymovie</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s2">&quot;Predict rating for user # </span><span class="si">%d</span><span class="s2"> movie: </span><span class="si">%s</span><span class="s2"> is: </span><span class="si">%d</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movie</span><span class="p">[</span><span class="n">querymovie</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">t</span><span class="p">)</span>
     
    
         
@@ -2598,10 +847,10 @@ _______________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[282]:</div>
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> <span class="n">PredictRateForUser</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre> <span class="n">PredictRateForUser</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2618,17 +867,17 @@ _______________
 Predict rating for user # 1 movie: Four Rooms (1995) is: 4 
 Predict rating for user # 1 movie: Get Shorty (1995) is: 5 
 Predict rating for user # 1 movie: Copycat (1995) is: 3 
-Predict rating for user # 1 movie: Shanghai Triad (Yao a yao yao dao waipo qiao) (1995) is: 4 
+Predict rating for user # 1 movie: Shanghai Triad (Yao a yao yao dao waipo qiao) (1995) is: 5 
 Predict rating for user # 1 movie: Twelve Monkeys (1995) is: 5 
 Predict rating for user # 1 movie: Babe (1995) is: 5 
 Predict rating for user # 1 movie: Dead Man Walking (1995) is: 4 
 Predict rating for user # 1 movie: Seven (Se7en) (1995) is: 5 
 Predict rating for user # 1 movie: Usual Suspects, The (1995) is: 5 
 Predict rating for user # 1 movie: Mr. Holland&apos;s Opus (1995) is: 4 
-Predict rating for user # 1 movie: French Twist (Gazon maudit) (1995) is: 4 
+Predict rating for user # 1 movie: French Twist (Gazon maudit) (1995) is: 5 
 Predict rating for user # 1 movie: From Dusk Till Dawn (1996) is: 4 
-Predict rating for user # 1 movie: White Balloon, The (1995) is: 3 
-Predict rating for user # 1 movie: Angels and Insects (1995) is: 3 
+Predict rating for user # 1 movie: White Balloon, The (1995) is: 5 
+Predict rating for user # 1 movie: Angels and Insects (1995) is: 5 
 Predict rating for user # 1 movie: Muppet Treasure Island (1996) is: 4 
 Predict rating for user # 1 movie: Braveheart (1995) is: 5 
 Predict rating for user # 1 movie: Taxi Driver (1976) is: 5 
@@ -2638,6 +887,84 @@ Predict rating for user # 1 movie: Bad Boys (1995) is: 4
 Predict rating for user # 1 movie: Apollo 13 (1995) is: 4 
 Predict rating for user # 1 movie: Batman Forever (1995) is: 4 
 Predict rating for user # 1 movie: Belle de jour (1967) is: 2 
+Predict rating for user # 1 movie: Crimson Tide (1995) is: 5 
+Predict rating for user # 1 movie: Crumb (1994) is: 4 
+Predict rating for user # 1 movie: Desperado (1995) is: 4 
+Predict rating for user # 1 movie: Doom Generation, The (1995) is: 1 
+Predict rating for user # 1 movie: Free Willy 2: The Adventure Home (1995) is: 4 
+Predict rating for user # 1 movie: Mad Love (1995) is: 3 
+Predict rating for user # 1 movie: Nadja (1994) is: 3 
+Predict rating for user # 1 movie: Net, The (1995) is: 3 
+Predict rating for user # 1 movie: Strange Days (1995) is: 4 
+Predict rating for user # 1 movie: To Wong Foo, Thanks for Everything! Julie Newmar (1995) is: 3 
+Predict rating for user # 1 movie: Billy Madison (1995) is: 4 
+Predict rating for user # 1 movie: Clerks (1994) is: 5 
+Predict rating for user # 1 movie: Disclosure (1994) is: 4 
+Predict rating for user # 1 movie: Dolores Claiborne (1994) is: 4 
+Predict rating for user # 1 movie: Eat Drink Man Woman (1994) is: 5 
+Predict rating for user # 1 movie: Exotica (1994) is: 4 
+Predict rating for user # 1 movie: Ed Wood (1994) is: 4 
+Predict rating for user # 1 movie: Hoop Dreams (1994) is: 5 
+Predict rating for user # 1 movie: I.Q. (1994) is: 4 
+Predict rating for user # 1 movie: Legends of the Fall (1994) is: 4 
+Predict rating for user # 1 movie: Madness of King George, The (1994) is: 2 
+Predict rating for user # 1 movie: Natural Born Killers (1994) is: 4 
+Predict rating for user # 1 movie: Outbreak (1995) is: 4 
+Predict rating for user # 1 movie: Professional, The (1994) is: 4 
+Predict rating for user # 1 movie: Pulp Fiction (1994) is: 5 
+Predict rating for user # 1 movie: Priest (1994) is: 4 
+Predict rating for user # 1 movie: Quiz Show (1994) is: 5 
+Predict rating for user # 1 movie: Three Colors: Red (1994) is: 4 
+Predict rating for user # 1 movie: Three Colors: Blue (1993) is: 4 
+Predict rating for user # 1 movie: Three Colors: White (1994) is: 4 
+Predict rating for user # 1 movie: Stargate (1994) is: 5 
+Predict rating for user # 1 movie: Santa Clause, The (1994) is: 4 
+Predict rating for user # 1 movie: Shawshank Redemption, The (1994) is: 5 
+Predict rating for user # 1 movie: What&apos;s Eating Gilbert Grape (1993) is: 4 
+Predict rating for user # 1 movie: While You Were Sleeping (1995) is: 3 
+Predict rating for user # 1 movie: Ace Ventura: Pet Detective (1994) is: 4 
+Predict rating for user # 1 movie: Crow, The (1994) is: 3 
+Predict rating for user # 1 movie: Forrest Gump (1994) is: 5 
+Predict rating for user # 1 movie: Four Weddings and a Funeral (1994) is: 5 
+Predict rating for user # 1 movie: Lion King, The (1994) is: 4 
+Predict rating for user # 1 movie: Mask, The (1994) is: 4 
+Predict rating for user # 1 movie: Maverick (1994) is: 5 
+Predict rating for user # 1 movie: Faster Pussycat! Kill! Kill! (1965) is: 4 
+Predict rating for user # 1 movie: Brother Minister: The Assassination of Malcolm X (1994) is: 3 
+Predict rating for user # 1 movie: Carlito&apos;s Way (1993) is: 5 
+Predict rating for user # 1 movie: Firm, The (1993) is: 3 
+Predict rating for user # 1 movie: Free Willy (1993) is: 3 
+Predict rating for user # 1 movie: Fugitive, The (1993) is: 5 
+Predict rating for user # 1 movie: Hot Shots! Part Deux (1993) is: 3 
+Predict rating for user # 1 movie: Hudsucker Proxy, The (1994) is: 5 
+Predict rating for user # 1 movie: Jurassic Park (1993) is: 5 
+Predict rating for user # 1 movie: Much Ado About Nothing (1993) is: 5 
+Predict rating for user # 1 movie: Robert A. Heinlein&apos;s The Puppet Masters (1994) is: 4 
+Predict rating for user # 1 movie: Ref, The (1994) is: 3 
+Predict rating for user # 1 movie: Remains of the Day, The (1993) is: 5 
+Predict rating for user # 1 movie: Searching for Bobby Fischer (1993) is: 5 
+Predict rating for user # 1 movie: Sleepless in Seattle (1993) is: 3 
+Predict rating for user # 1 movie: Blade Runner (1982) is: 5 
+Predict rating for user # 1 movie: So I Married an Axe Murderer (1993) is: 5 
+Predict rating for user # 1 movie: Nightmare Before Christmas, The (1993) is: 5 
+Predict rating for user # 1 movie: True Romance (1993) is: 4 
+Predict rating for user # 1 movie: Welcome to the Dollhouse (1995) is: 4 
+Predict rating for user # 1 movie: Home Alone (1990) is: 4 
+Predict rating for user # 1 movie: Aladdin (1992) is: 4 
+Predict rating for user # 1 movie: Terminator 2: Judgment Day (1991) is: 5 
+Predict rating for user # 1 movie: Dances with Wolves (1990) is: 5 
+Predict rating for user # 1 movie: Silence of the Lambs, The (1991) is: 5 
+Predict rating for user # 1 movie: Snow White and the Seven Dwarfs (1937) is: 5 
+Predict rating for user # 1 movie: Heavy Metal (1981) is: 4 
+Predict rating for user # 1 movie: Aristocats, The (1970) is: 4 
+Predict rating for user # 1 movie: All Dogs Go to Heaven 2 (1996) is: 3 
+Predict rating for user # 1 movie: Theodore Rex (1995) is: 3 
+Predict rating for user # 1 movie: Sgt. Bilko (1996) is: 4 
+Predict rating for user # 1 movie: Diabolique (1996) is: 3 
+Predict rating for user # 1 movie: Moll Flanders (1996) is: 4 
+Predict rating for user # 1 movie: Kids in the Hall: Brain Candy (1996) is: 4 
+Predict rating for user # 1 movie: Mystery Science Theater 3000: The Movie (1996) is: 5 
+Predict rating for user # 1 movie: Operation Dumbo Drop (1995) is: 3 
 </pre>
 </div>
 </div>
@@ -2647,17 +974,17 @@ Predict rating for user # 1 movie: Belle de jour (1967) is: 2
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-282-aed2646f7759&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-165-aed2646f7759&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">----&gt; 1</span><span class="ansiyellow"> </span>PredictRateForUser<span class="ansiyellow">(</span>rating_mat<span class="ansiyellow">,</span>npmovies<span class="ansiyellow">,</span><span class="ansicyan">1</span><span class="ansiyellow">,</span>pearsSim<span class="ansiyellow">)</span><span class="ansiyellow"></span>
 
-<span class="ansigreen">&lt;ipython-input-279-29a63b4e2958&gt;</span> in <span class="ansicyan">PredictRateForUser</span><span class="ansiblue">(dataMat, movie, userId, metric)</span>
+<span class="ansigreen">&lt;ipython-input-21-29a63b4e2958&gt;</span> in <span class="ansicyan">PredictRateForUser</span><span class="ansiblue">(dataMat, movie, userId, metric)</span>
 <span class="ansigreen">     12</span>         <span class="ansigreen">for</span> i <span class="ansigreen">in</span> range<span class="ansiyellow">(</span>dataMat<span class="ansiyellow">.</span>shape<span class="ansiyellow">[</span><span class="ansicyan">1</span><span class="ansiyellow">]</span><span class="ansiyellow">)</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
 <span class="ansigreen">     13</span>             <span class="ansigreen">if</span> i <span class="ansiyellow">!=</span> querymovie<span class="ansiyellow">:</span><span class="ansiyellow"></span>
 <span class="ansigreen">---&gt; 14</span><span class="ansiyellow">                 </span>simMovie<span class="ansiyellow">[</span>i<span class="ansiyellow">]</span> <span class="ansiyellow">=</span> metric<span class="ansiyellow">(</span>dataMat<span class="ansiyellow">[</span><span class="ansiyellow">:</span><span class="ansiyellow">,</span>i<span class="ansiyellow">]</span><span class="ansiyellow">,</span> dataMat<span class="ansiyellow">[</span><span class="ansiyellow">:</span><span class="ansiyellow">,</span> querymovie<span class="ansiyellow">]</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
 <span class="ansigreen">     15</span>         sortedVec <span class="ansiyellow">=</span> simMovie<span class="ansiyellow">.</span>argsort<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow">[</span><span class="ansiyellow">:</span><span class="ansiyellow">:</span><span class="ansiyellow">-</span><span class="ansicyan">1</span><span class="ansiyellow">]</span><span class="ansiyellow"></span>
 <span class="ansigreen">     16</span>         <span class="ansigreen">for</span> j <span class="ansigreen">in</span> sortedVec<span class="ansiyellow">:</span><span class="ansiyellow"></span>
 
-<span class="ansigreen">&lt;ipython-input-183-e6367618c250&gt;</span> in <span class="ansicyan">pearsSim</span><span class="ansiblue">(inA, inB)</span>
+<span class="ansigreen">&lt;ipython-input-151-732059a34a96&gt;</span> in <span class="ansicyan">pearsSim</span><span class="ansiblue">(inA, inB)</span>
 <span class="ansigreen">      8</span> <span class="ansigreen">def</span> pearsSim<span class="ansiyellow">(</span>inA<span class="ansiyellow">,</span>inB<span class="ansiyellow">)</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
 <span class="ansigreen">      9</span>     <span class="ansigreen">if</span> len<span class="ansiyellow">(</span>inA<span class="ansiyellow">)</span> <span class="ansiyellow">&lt;</span> <span class="ansicyan">3</span> <span class="ansiyellow">:</span> <span class="ansigreen">return</span> <span class="ansicyan">1.0</span><span class="ansiyellow"></span>
 <span class="ansigreen">---&gt; 10</span><span class="ansiyellow">     </span><span class="ansigreen">return</span> <span class="ansicyan">0.5</span> <span class="ansiyellow">+</span> <span class="ansicyan">0.5</span> <span class="ansiyellow">*</span> corrcoef<span class="ansiyellow">(</span>inA<span class="ansiyellow">,</span> inB<span class="ansiyellow">,</span> rowvar <span class="ansiyellow">=</span> <span class="ansicyan">0</span><span class="ansiyellow">)</span><span class="ansiyellow">[</span><span class="ansicyan">0</span><span class="ansiyellow">]</span><span class="ansiyellow">[</span><span class="ansicyan">1</span><span class="ansiyellow">]</span><span class="ansiyellow"></span>
@@ -2688,10 +1015,10 @@ Predict rating for user # 1 movie: Belle de jour (1967) is: 2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[269]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1"># Predict all unrated movie for a user and a specific movie</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1"># Predict all unrated movie for a user and a specific movie</span>
 <span class="k">def</span> <span class="nf">PredictRateForUserMovie</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span><span class="n">querymovie</span><span class="p">,</span><span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
     <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
     <span class="c1">#print &#39;Selected Movie: \n&#39;</span>
@@ -2700,7 +1027,7 @@ Predict rating for user # 1 movie: Belle de jour (1967) is: 2
     <span class="n">unrated</span> <span class="o">=</span> <span class="n">unratedMovies</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movies</span><span class="p">,</span><span class="n">dataMat</span><span class="p">)</span>
     <span class="n">simMovie</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">if</span> <span class="n">querymovie</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">unrated</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="s2">&quot;User # </span><span class="si">%d</span><span class="s2"> has rated the movie, the rating is </span><span class="si">%d</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">querymovie</span><span class="p">])</span>
+        <span class="k">print</span> <span class="s2">&quot;User # </span><span class="si">%d</span><span class="s2"> has rated the movie, the rating is </span><span class="si">%d</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">querymovie</span><span class="p">])</span>
     <span class="k">else</span><span class="p">:</span>   
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
             <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">querymovie</span><span class="p">:</span>
@@ -2710,7 +1037,7 @@ Predict rating for user # 1 movie: Belle de jour (1967) is: 2
             <span class="k">if</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
                 <span class="n">t</span> <span class="o">=</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
                 <span class="k">break</span>
-        <span class="nb">print</span> <span class="s2">&quot;Predict rating for user # </span><span class="si">%d</span><span class="s2">, movie:  </span><span class="si">%s</span><span class="s2"> is: </span><span class="si">%d</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movie</span><span class="p">[</span><span class="n">querymovie</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s2">&quot;Predict rating for user # </span><span class="si">%d</span><span class="s2">, movie:  </span><span class="si">%s</span><span class="s2"> is: </span><span class="si">%d</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movie</span><span class="p">[</span><span class="n">querymovie</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">t</span><span class="p">)</span>
     
    
         
@@ -2723,10 +1050,10 @@ Predict rating for user # 1 movie: Belle de jour (1967) is: 2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[270]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">PredictRateForUserMovie</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">PredictRateForUserMovie</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2750,10 +1077,23 @@ Predict rating for user # 1 movie: Belle de jour (1967) is: 2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[285]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">PredictTest</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1"># PredictTest will predict rating for a rated movie of the user, and then compare the predict result with actual rating </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">PredictTest</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
     <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
     <span class="c1">#print &#39;Selected Movie: \n&#39;</span>
     <span class="c1">#print mv[:5]</span>
@@ -2771,9 +1111,9 @@ Predict rating for user # 1 movie: Belle de jour (1967) is: 2
                 <span class="k">if</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
                     <span class="n">t</span> <span class="o">=</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
                     <span class="k">break</span>
-            <span class="nb">print</span> <span class="s2">&quot;Predict rating for user # </span><span class="si">%d</span><span class="s2"> movie: </span><span class="si">%s</span><span class="s2"> is: </span><span class="si">%d</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movie</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">t</span><span class="p">)</span>
-            <span class="nb">print</span> <span class="s2">&quot;Actual rating for user # </span><span class="si">%d</span><span class="s2"> movie: </span><span class="si">%s</span><span class="s2"> is </span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movie</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
-            <span class="nb">print</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">print</span> <span class="s2">&quot;Predict rating for user # </span><span class="si">%d</span><span class="s2"> movie: </span><span class="si">%s</span><span class="s2"> is: </span><span class="si">%d</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movie</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">t</span><span class="p">)</span>
+            <span class="k">print</span> <span class="s2">&quot;Actual rating for user # </span><span class="si">%d</span><span class="s2"> movie: </span><span class="si">%s</span><span class="s2"> is </span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movie</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+            <span class="k">print</span> <span class="s2">&quot;&quot;</span>
 </pre></div>
 
 </div>
@@ -2786,7 +1126,7 @@ Predict rating for user # 1 movie: Belle de jour (1967) is: 2
 <div class="prompt input_prompt">In&nbsp;[286]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> <span class="n">PredictTest</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre> <span class="n">PredictTest</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2995,10 +1335,72 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[231]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">rating_mat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1">#PredictTest2 will find the the accuracy by how close the predicted movie rating to the actual movie rating.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">PredictTest2</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+    <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
+    <span class="c1">#print &#39;Selected Movie: \n&#39;</span>
+    <span class="c1">#print mv[:5]</span>
+    
+    <span class="n">unrated</span> <span class="o">=</span> <span class="n">unratedMovies</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movies</span><span class="p">,</span><span class="n">dataMat</span><span class="p">)</span>
+    <span class="n">simMovie</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">p</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">unrated</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">unrated</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">!=</span><span class="n">j</span><span class="p">:</span>
+                    <span class="n">simMovie</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[:,</span><span class="n">i</span><span class="p">],</span> <span class="n">dataMat</span><span class="p">[:,</span> <span class="n">j</span><span class="p">])</span>
+            <span class="n">sortedVec</span> <span class="o">=</span> <span class="n">simMovie</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">sortedVec</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+                    <span class="n">t</span> <span class="o">=</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+                    <span class="k">break</span>
+            <span class="n">p</span> <span class="o">+=</span><span class="n">t</span><span class="o">/</span><span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">else</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="n">t</span>
+            
+            <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+           
+    <span class="k">print</span> <span class="s2">&quot;acuracy is : </span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c1">#accury using pearsSim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">PredictTest2</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -3009,13 +1411,11 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[231]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1682L</pre>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>acuracy is : 0.761582
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -3024,39 +1424,72 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[240]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1">#PRedictTest4 is modified edition of PredictTest2, it returns the accurcy for a single user instead of printing it out.</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[240]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1620</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[256]:</div>
+<div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">npmovies</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">PredictTest4</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+    <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
+    <span class="c1">#print &#39;Selected Movie: \n&#39;</span>
+    <span class="c1">#print mv[:5]</span>
+    
+    <span class="n">unrated</span> <span class="o">=</span> <span class="n">unratedMovies</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movies</span><span class="p">,</span><span class="n">dataMat</span><span class="p">)</span>
+    <span class="n">simMovie</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">p</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">unrated</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">unrated</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">!=</span><span class="n">j</span><span class="p">:</span>
+                    <span class="n">simMovie</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[:,</span><span class="n">i</span><span class="p">],</span> <span class="n">dataMat</span><span class="p">[:,</span> <span class="n">j</span><span class="p">])</span>
+            <span class="n">sortedVec</span> <span class="o">=</span> <span class="n">simMovie</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">sortedVec</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+                    <span class="n">t</span> <span class="o">=</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+                    <span class="k">break</span>
+            <span class="n">p</span> <span class="o">+=</span><span class="n">t</span><span class="o">/</span><span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">else</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="n">t</span>
+            
+            <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="n">t</span><span class="o">=</span> <span class="n">p</span><span class="o">/</span><span class="n">n</span>
+    <span class="k">return</span> <span class="n">t</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c1">#find 20% of the total user data</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[159]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="nb">len</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">)</span><span class="o">*</span><span class="mf">0.2</span>
 </pre></div>
 
 </div>
@@ -3067,11 +1500,11 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[256]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[159]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&apos;Four Rooms (1995)&apos;</pre>
+<pre>188.60000000000002</pre>
 </div>
 
 </div>
@@ -3085,7 +1518,219 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="c1">#So I would like to use 189 user as test data</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c1">#accury using ecludSim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">k</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">190</span><span class="p">):</span>
+    <span class="n">k</span><span class="o">+=</span><span class="n">PredictTest4</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">ecludSim</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+<span class="k">print</span> <span class="s2">&quot;The accuracy using ecludSim is </span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The accuracy using ecludSim is 0.775267
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c1">#accury using pearsSim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">k</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">190</span><span class="p">):</span>
+    <span class="n">k</span><span class="o">+=</span><span class="n">PredictTest4</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+<span class="k">print</span> <span class="s2">&quot;The accuracy using pearsSim is </span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The accuracy using pearsSim is 0.796405
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c1">#accurcy using CosSim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[164]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">k</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">190</span><span class="p">):</span>
+    <span class="n">k</span><span class="o">+=</span><span class="n">PredictTest4</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">cosSim2</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+<span class="k">print</span> <span class="s2">&quot;The accuracy using cosSim is </span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The accuracy using cosSim is 0.795872
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">PredictTest3</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+    
+    <span class="n">unrated</span> <span class="o">=</span> <span class="n">unratedMovies</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movies</span><span class="p">,</span><span class="n">dataMat</span><span class="p">)</span>
+    <span class="n">simMovie</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">p</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">unrated</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataMat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">unrated</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">!=</span><span class="n">j</span><span class="p">:</span>
+                    <span class="n">simMovie</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[:,</span><span class="n">i</span><span class="p">],</span> <span class="n">dataMat</span><span class="p">[:,</span> <span class="n">j</span><span class="p">])</span>
+            <span class="n">sortedVec</span> <span class="o">=</span> <span class="n">simMovie</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">sortedVec</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+                    <span class="n">t</span> <span class="o">=</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+                    <span class="k">break</span>
+            <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">userId</span><span class="p">][</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">p</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>        <span class="c1">#p +=t/dataMat[userId][j] if t &lt; dataMat[userId][j] else dataMat[userId][j]/t</span>
+    <span class="k">print</span> <span class="n">p</span>
+    <span class="k">print</span> <span class="n">n</span> 
+   
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre> <span class="n">PredictTest3</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+23
+62
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="mi">23</span><span class="o">/</span>
 </pre></div>
 
 </div>

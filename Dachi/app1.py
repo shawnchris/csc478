@@ -71,7 +71,7 @@ def kNNErrStat(data,uList,mList,k):
 # Load movieLens data
 if __name__ == "__main__":
     print "loading data..."
-    if sys.argv[1] is None:
+    if len(sys.argv) <= 1:
         path = '/Users/Dachi/Dropbox/5_Career/DePaul/CSC478_ProgrammingDataMiningApp/Project/Movielens'
     else:
         path = sys.argv[1]

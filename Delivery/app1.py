@@ -75,7 +75,7 @@ def kNNErrStat(data,uList,mList,k):
 if __name__ == "__main__":
     print "loading data..."
     if len(sys.argv) <= 1:
-        path = '/Users/Dachi/Dropbox/5_Career/DePaul/CSC478_ProgrammingDataMiningApp/Project/Movielens'
+        path = os.getcwd()+"/MovieLens"
     else:
         path = sys.argv[1]
     os.chdir(path)

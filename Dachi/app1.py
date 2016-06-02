@@ -15,6 +15,9 @@ def cosDist(vecA,vecB):
 
 def userProfile(userId):
     # Get the movie ids of top 5 highest rating.
+    gender = "male" if users.gender[userId] == "M" else "female"
+    print "User " + str(userId) + " is " + str(users.age[userId]) + " years old " + gender + \
+    ", occupation: " + users.job[userId] + "."
     movieIds = np.argsort(rating_mat[userId,:])[-5:]
     
     # Print user's top 5 favorite movies
@@ -30,7 +33,7 @@ def unratedMovies(userId):
     return unrated
 
 # kNN predict
-def kNNPredict(data,k,userId,movieId,distMea=cosDist,weighted=False):
+def kNNPredict(data,k,userId,movieId,distMea=cosDist):
     dists = []
     index = []
     for i in range(len(users)):

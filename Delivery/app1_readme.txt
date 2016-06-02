@@ -2,11 +2,10 @@ CSC478 Final Project Program Instruction
 
 The paragraphs belows describe how to run the application part 1: movie recommendation system using collaborative filtering(user-based).
 
-Please beware you need to change the directory at the begining to load the data successfully.
+The path to load data is set as the current working directory, so if you want to run the python file(app1.py/app2.py) please run them at the root folder like the way below:
 
-    path = '/Your/Path/To/Data'
-    os.chdir(path)
-    ...
+    python app1.py
+    python app2.py
 
 1.Program demonstration: app1.ipynb
 You can open it using Jupyter notebook, the demonstration of the system and sample data run/evaluation results are presented in this file.

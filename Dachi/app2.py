@@ -40,6 +40,9 @@ def unratedMovies(userId):
             unrated.append(i)
     return unrated
 
+def get_mv_text(movie, id):
+    return movie[id]
+
 # rec_movie
 
 def rec_most_similar_movies(dataMat, movie, querymovie, k, metric=pearsSim):
@@ -125,7 +128,7 @@ if __name__ == "__main__":
             movieId = raw_input()
         movieId = int(movieId)
         print "You have selected movie " + movies.title[movieId]
-
+        
         rec_most_similar_movies(rating_mat, movie,movieId, 5, metric=pearsSim)
 
         

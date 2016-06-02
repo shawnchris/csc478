@@ -106,6 +106,7 @@ if __name__ == "__main__":
         userId = raw_input()
         while not userId.isdigit() or int(userId) < 1 or int(userId) > 943:
             print "Please enter an user id to predict: (1 to 943)"
+            userId = raw_input()
         userId = int(userId)
         print "You have selected user " + str(userId)
         userProfile(userId)
@@ -114,6 +115,7 @@ if __name__ == "__main__":
         movieId = raw_input()
         while not movieId.isdigit() or int(movieId) < 1 or int(movieId) > 1682:
             print "Please enter a movie id to predict for: (1 to 1682)"
+            movieId = raw_input()
         movieId = int(movieId)
         print "You have selected movie " + movies.title[movieId]
         

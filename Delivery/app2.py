@@ -5,6 +5,9 @@ import numpy as np
 import scipy as sp
 import pandas as pd
 import matplotlib.pyplot as plt
+from numpy import *
+from numpy import linalg as la
+import numpy as np
 
 # Some utility function
 def cosSim(vecA,vecB):
@@ -19,7 +22,7 @@ def ecludSim(inA,inB):
 
 def pearsSim(inA,inB):
     if len(inA) < 3 : return 1.0
-    return 0.5 + 0.5 * corrcoef(inA, inB, rowvar = 0)[0][1]
+    return 0.5 + 0.5 * np.corrcoef(inA, inB, rowvar = 0)[0][1]
 
 def userProfile(userId):
     # Get the movie ids of top 5 highest rating.
@@ -46,11 +49,11 @@ def get_mv_text(movie, id):
 # rec_movie
 
 def rec_most_similar_movies(dataMat, movie, querymovie, k, metric=pearsSim):
-    mv = get_mv_text(movie, querymovie)
-    print 'Selected Movie: \n'
-    print mv[:5]
     
-    simMovie = zeros(dataMat.shape[1])
+    print 'Based on your selected Movie, we recommand the following movie to you: \n'
+    
+    
+    simMovie = np.zeros(dataMat.shape[1])
     for i in range(dataMat.shape[1]):
         if i != querymovie:
             simMovie[i] = metric(dataMat[:,i], dataMat[:, querymovie])
@@ -65,8 +68,8 @@ def PredictRateForUserMovie(dataMat, movie, userId,querymovie,metric=pearsSim):
     #print 'Selected Movie: \n'
     #print mv[:5]
     
-    unrated = unratedMovies(userId,movies,dataMat)
-    simMovie = zeros(dataMat.shape[1])
+    unrated = unratedMovies(userId)
+    simMovie = np.zeros(dataMat.shape[1])
     if querymovie not in unrated:
         print "User # %d has rated the movie, the rating is %d "%(userId,dataMat[userId][querymovie])
     else:   
@@ -78,14 +81,14 @@ def PredictRateForUserMovie(dataMat, movie, userId,querymovie,metric=pearsSim):
             if dataMat[userId][j] !=0:
                 t = dataMat[userId][j]
                 break
-        print "Predict rating for user # %d, movie:  %s is: %d "%(userId,movie[querymovie][1],t)
+        return t
     
 
 # Load movieLens data
 if __name__ == "__main__":
     print "loading data..."
     if len(sys.argv) <= 1:
-        path = '/Users/Dachi/Dropbox/5_Career/DePaul/CSC478_ProgrammingDataMiningApp/Project/Movielens'
+        path = 'F:\Computer science\csc478\csc478 Final\movielens\Movielens-02'
     else:
         path = sys.argv[1]
     os.chdir(path)
@@ -98,6 +101,9 @@ if __name__ == "__main__":
                                                                      "Thriller","War","Western"])
     ratings = pd.read_table('u.data',delimiter='\t',header=None,names=["user","movie","rating","timestamp"])
     genres = pd.read_table('u.genre',delimiter='|',header=None,names=["genre","id"])
+
+    npmovies = np.genfromtxt('u.item',delimiter='|',dtype=str)
+    npuser = np.genfromtxt('u.user',delimiter='|',dtype=str)
     
     # Convert data to matrix
     rating_mat=np.zeros((len(users),len(movies)))
@@ -129,26 +135,26 @@ if __name__ == "__main__":
         movieId = int(movieId)
         print "You have selected movie " + movies.title[movieId]
         
-        rec_most_similar_movies(rating_mat, movies,movieId, 5, metric=pearsSim)
+        rec_most_similar_movies(rating_mat, npmovies,movieId, 5, metric=pearsSim)
 
         
         print "\nPlease enter method you want to use to predict for: \n 1: cosSim\n 2: pearsSim\n 3: eculid Sim"
         method = raw_input()
         while not method.isdigit() or int(method) < 1 or int(method) > 3:
-            print "\nPlease enter method you want to use to predict for: \n 1: cosSim\n 2: pearsSim\n 3: eculid Sim"
+            print "\nPlease enter method you want to use to predict for: \n 1: cosSim\n 2: pearsSim\n 3: eclud Sim"
             method = raw_input()
         if int(method) == 1:
-            method ='cosSim'
+            method =cosSim
         elif int(method) == 2:
-            method ='pearsSim'
+            method =pearsSim
         else:
-            method ='ecludSim'
+            method =ecludSim
         
             
         
         
         
-        rating =PredictRateForUserMovie(rating_mat,movies,userId,movieId,method)
+        rating =PredictRateForUserMovie(rating_mat,npmovies,userId,movieId,method)
             
         print "\nThe predicted rating is %d." % (rating)
         if rating_mat[userId-1,movieId-1] == 0:
@@ -160,6 +166,3 @@ if __name__ == "__main__":
         if res.lower() != "y":
             cont = False
     print "Bye!"    
-
-
-

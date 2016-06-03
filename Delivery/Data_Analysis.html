@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>CSC478_Project</title>
+<title>Data_Analysis</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -197,8 +197,8 @@ div#notebook {
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Section 1: Explore the general characteristics of the data</span>
 
 <span class="c1"># Load movieLens data</span>
-<span class="c1"># path = &#39;/Users/Dachi/Dropbox/5_Career/DePaul/CSC478_ProgrammingDataMiningApp/Project/Movielens&#39;</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;C:\Users\Shawn\csc478\Movielens&#39;</span>
+<span class="c1">#path = &#39;C:\Users\Shawn\csc478\Movielens&#39;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/Movielens&#39;</span>
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 <span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.user&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="s2">&quot;gender&quot;</span><span class="p">,</span><span class="s2">&quot;job&quot;</span><span class="p">,</span><span class="s2">&quot;zip code&quot;</span><span class="p">])</span>
 <span class="n">movies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.item&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="s2">&quot;rl_date&quot;</span><span class="p">,</span><span class="s2">&quot;vrl_date&quot;</span><span class="p">,</span><span class="s2">&quot;url&quot;</span><span class="p">,</span>
@@ -522,7 +522,7 @@ kyEhSWoyJCRJTYaEJKnJkJAkNRkSkqSm/w9a91COdQmGFQAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa8b7128&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa94e128&gt;</pre>
 </div>
 
 </div>
@@ -647,7 +647,7 @@ WCRJjTDQJakRBrokNcJAl6RGGOiS1Ij/A+YOlvdFxBTLAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa83a320&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xaaba240&gt;</pre>
 </div>
 
 </div>
@@ -1967,10 +1967,10 @@ Rating  0.131142  1.000000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">genre</span> <span class="o">==</span> <span class="s1">&#39;Fantasy&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">genre</span> <span class="o">=</span> <span class="s1">&#39;Fantasy&#39;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">get_age_rating</span><span class="p">(</span><span class="n">genre</span><span class="p">,</span> <span class="n">users</span><span class="p">,</span> <span class="n">movies</span><span class="p">,</span> <span class="n">ratings</span><span class="p">)</span>
 </pre></div>
 
@@ -1981,7 +1981,7 @@ Rating  0.131142  1.000000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Rating&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">)</span>
@@ -1995,11 +1995,11 @@ Rating  0.131142  1.000000
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[21]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xb0d5748&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xb5aa400&gt;</pre>
 </div>
 
 </div>
@@ -2009,178 +2009,178 @@ Rating  0.131142  1.000000
 
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,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
-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
-t8Ax6tPaHwC+m9YnHCN1zIsF5h3VzpZ3+JhUXlHnnn6eO4GHCP488848x9RnaWc7j7dz5pnrOhdy
-XyzsE86jkPltzjivfPde2Cc+8YnQGAvnLhxzeHg4Mq/h4WGefvrpgsYNW8zn0XIevxrGxsYYGxtb
-WpBiv0IU+yL4u7m/R1Dss/UpzZfAVaAnfD3h6wlfT/grgXJc0gE+Dvz7PH1KMyOrJLU2uG7d7pxr
-+Nn2RwnWyxMOjzok3Kwqo31vLTy6vWnTZq+srAn1qcjTDseszGgHOVUWlUex7U2bNntjY1PGtvB5
-5Nt/bw0/WD/u7T3v7e27cs5nff26jGu0adPmLGPei9nbez5jW2oNv9DrXMh9Ee4TzitqbtL7p9bw
-i7n3wurr1y2Y33wxw/O9nGv4iz2XpR6/2squ4ANPAu8ArwAvAy8BRyL6lW5WVsns7KxPTk7mfKLL
-tT/K+Pi49/f3+/j4uLsHT1u7du3yK1euuLv7xYsXva2tzS9evOju7jdu3PCjR4/6jRs35mP09fV5
-S0uL9/X1RcYM7w/HDPd3dz958qQ3Njb6yZMn3d390KFDXlNT44cOHXJ394GBAe/o6PCBgQF3dz97
-9qyvX7/ez549W3De4RjhPMLtcP+pqSm/du2aT01NzcccGRnx06dPzz9pho8JX6Nw/6iY4W3FXudC
-+ufLKzx/4f6LuffCwvdeITHDeS6HpZ7LcszFallMwbfguNVlZl4OeYiIvFeYGe5uxRyjd9qKiMSE
-Cr6ISEyo4IuIxIQKvohITKjgi4jEhAq+iEhMqOCLiMSECr6ISEyo4IuIxIQKvohITKjgi4jEhAq+
-iEhMqOCLiMSECr6ISEyo4IuIxIQKvohITKjgi4jEhAq+iEhMqOCLiMSECr6ISEyo4IuIxIQKvohI
-TKjgi4jEhAq+iEhMqOCLiMSECr6ISEyo4IuIxIQKvohITJS04JvZb5jZG2b2ainHERGR/Er9hP8x
-4EdKPIaIiBSgpAXf3ceBb5VyjDiZm5vjzp07zM3NATA9Pc3169eZnp4GYGJigkuXLjExMQHA4OAg
-Bw8eZHBwcD7G/v37qaqqYv/+/ZEx8405OjrKmTNnGB0dne8THjfcJxwj3H9oaIienh6GhoYizysq
-Rr68851HITHDeeTbn21bMYo9r0LGXEzMUljq3MgycPeSvoBW4NU8fVxyu3nzeU8kGr2hYY8nEo3+
-1FPdDgmHNoeENzdvTra3OSS8srI2o93Y2ORQmbENLCPmzZvP5xxz06YtGce3t+9KyyPYtmZNQ0Z7
-06bNGTEef3x3xv7q6vqMdn19Q8Z59faeX5BHb+8zOfPON3c3bz6fN+bhw5nze/hwd8757+097729
-zyzYtpRrnO+83D3vmIuJWQpLnRtZKFk3i6vHxR5Q9AAq+Es2OzvriUSjw10Hd7id/OTJ1r6bbN9O
-a9dk6fPR+XYi0eizs7NZxnwhy/F1aduuZenzXJYY4byjx6itXZfzXNPzzj93d72u7v155jNq/tLb
-Uf3rImNMTU0t8hrnPi9396mpqZxjLiZmKeTLUxZnMQW/anX+X7HQ5cuX5z/u7Oyks7Nz1XIpNzMz
-M9TUbOatt3Ymt9QDzUC29k5gY3J7qr0GaIro8+J8u7q6lZmZGZqamiLGfDPLGG+nbXs9S5+7WWKE
-844aoxmzt0PHbMrok553/rnbSWXlw0AiZ8yF85fejprvJqBuQe6Tk5Ps2LFjQV6F5JnrvAAmJycj
-8r435mJilkK+PKUwY2NjjI2NLS1IsV8hin0Bm4HX8vQpzZfA+4Se8PWEH0VP+PFGuS3pADeBbxA8
-Bn4V+EiWfiWblPtFai123brdoTXme2vlQftRD9bwazLawRq+ZWxLreGnYmZbw0/tD4/R3r4rLY9g
-W339uox2ag0/FaO9fVfG/pqaRJbjg/NKX8NPxejtPZ8z73xzl76Gny1meH5Ta/jZ9gdr+OcXbFvK
-NS5sDT/3mIuJWQpLnRtZqOwKfsFJqOAXZHZ21icnJ+ef0KampvzatWvzT0rj4+Pe39/v4+Pj7u4+
-MDDgHR0dPjAwMB9j3759XllZ6fv27YuMmW/MkZERP336tI+MjMz3CY8b7hOOEe5/48YNP3r0qN+4
-cSPyvKJi5Ms733kUEjOcR7792bYVo9jzKmTMxcQshaXOjWRaTMG34LjVZWZeDnmIiLxXmBnubsUc
-o1+tICISEyr4IiIxoYIvIhITKvgiIjGhgi8iEhMq+CIiMaGCLyISEyr4IiIxoYIvIhITKvgiIjGh
-gi8iEhMq+CIiMaGCLyISEyr4IiIxoYIvIhITKvgiIjGhgi8iEhMq+CIiMaGCLyISEyr4IiIxoYIv
-IhITKvgiIjGhgi8iEhMq+CIiMaGCLyISEyr4IiIxoYIvIhITJS/4ZnbEzL5sZn9kZj9b6vFERCRa
-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
-SUVORK5CYII=
+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
+UVatBhBLaeP2XJJz4TbGTdf977xTb8yF2xhmnG7nibVf9YfGtoaUPrzOk8w4zWvqmWee8ZiL7Neh
+0zUlYp7PVtxLS0vYv3+/rz7MMbciP2zG/Pw85ufnN9dJrj8hcnkA+G0AX4d1Zr4B4PsAPulQL7Cf
+gql4h887fN7h8w4/zHf4gSb8tIFKYElH9c4aXXV1W+Br+MkxmpuTa/gPKZB9DT/Z5s466UOavjab
+bzl1vb2QfW62Dz9lP3H477O5uVXLyqKbiiuRqMs4j7q6unPqIzOGMs8x4vHqnMYQKbfLD2/0ac6F
+ee4l1/Ddzt875+adv0l5XVPmuMk1fL/XodN1299/MS0Ov2v42cbcivxQKEz4Pq2trenS0lKgP7nN
+MRYWFnR4eDjtzt6rzczMjJ4/f15nZmZUVfX06dNaXV2tp0+fVlXVw4cPa3l5uR4+fFhVVU+cOKFV
+VVV64sQJx/qqqmfPntVEIqFnz55VVevuq6OjQ8fGxlRV9ejRoxqNRvXo0aOOZac+d+zYoQB0x44d
+vuLs7e3V+vp67e3tVVXVgYEB3b17tw4MDKiqanNzs4qINjc3b4xhxjE5OaknT57UyclJVVUdGRnR
+1tZWHRkZcRzDnEuncXt6ejQej2tPT49jHOaYTueReZzN+Tb3m/PvZwzzuZrloaEh3bt3rw4NDamq
+6vLysk5MTGzc/TrNhTmO1/lr9unnmjKfa67XoVN9M458+sinTinIJ+GL1a64RERLIQ4ioruFiEBV
+Xf8u6oTvtCUiCgkmfCKikGDCJyIKCSZ8IqKQYMInIgoJJnwiopBgwiciCgkmfCKikGDCJyIKCSZ8
+IqKQYMInIgoJJnwiopBgwiciCgkmfCKikGDCJyIKCSZ8IqKQYMInIgoJJnwiopBgwiciColyP5VE
+5GmHzbcBfElVP13YkIiIKAh+7/CrALQC+Jr9aAHQAOC8iPxeQLEREVEBiap6VxL5IoBDqvqOXS4H
+8AUAhwG8pqqPbCoIEfUTBxERWUQEqiq5tPF7h18LYHtKOQ4gYf8AeDuXAYmIqDh8reEDGAXwiojM
+AxAARwD8tojEAXwuoNiIiKiAfC3pAICI3A/gUbt4Q1W/VbAguKRDRJSTIJd0knXXAXwXwEMiciSX
+gYiIqLj8vixzBMBpAK8D+LG9WQH8r4DiIiKiAvP7Kp2vAGhR1UD+QMslHSKi3AS5pHMLQEUeAVWK
+yIsi8rKIvCYil3Ltg4iICsNvwv8hrFfp/BcReTr58Gpk/0bwM6raBuuNW90i8qhHs3vC4uIiLl26
+hMXFRcf9KysruHLlClZWVja2ra+v48aNG1hfX3esc+rUKWzfvh2nTp0CANTX10NEUF9fDwC4//77
+ISK4//77AQBnzpxBTU0Nzpw5szHG448/jvLycjz++OMAgMHBQTQ1NWFwcBAAcPDgQZSVleHgwYOO
+Y7S0tCASiaClpWWjz8rKSogIKisrHeM8duwYKisrcezYMccYZmdnceHCBczOzrrGbcZptuno6EBF
+RQU6Ojoc609NTaGnpwdTU1OufT7yyCMQETzyyCOOcQ8PD2Pfvn0YHh52jXN8fBxHjhzB+Pi4Yx0z
+brM8OjqKtrY2jI6OOvYHZJ5bfX192LVrF/r6+hz7MMcwzzOnPs06ZtmrvhPzGHhdI374GXcz9e85
+qur5AHDW6eGnbUof2wB8CcD7HfbpveT48W4FYgo8rEBMu7q60/b39z9p79+rQEz7+y/q9PRVjcUS
+WlPTrrFYIqWPvfbXsrQ+AcmxHClAH07lQvcZyShHIlUebXKLobFxj48+c4+7trY+pzYVFduM/eVZ
+5yKRqMs4t7yfe/r+xsY9aefZ9PTVjD6bm9vS6vT3X0wrNze3pdU/cKA1o09TQ8ODaW2i0Xha2bxG
+/DCvGadxN1O/1Nl503cOVlV/CX8zD1i/RbwM4HsAfselTlBzsuUWFhbsE/mmAmp/jenCwoKqqi4v
+Lzvur6ysTtl2zajzK45tgAm7/BFj/3WX+lEfda577L+WUo549OG3/Isuz/umAlUuY3zULv+Uzxgm
+UsqVPp6bn7nw06cZx9MufXodj2S5Ko827nMRjW7PMQ7vMWOxhK6trW1cE5OTk0abCcc+kteIH2tr
+axqLJdL6MMfdTP27QT4JP+urdETkWVX9NRF5DdarcszfDlocmpl1fgygTUSqATwvIo+o6rJZ7/Ll
+yxvfd3Z2orOz06vrkjQ3NwfrY4aSU9MC4AHMzc3h0KFDWFpaAtBo7G+AyNsp224bfXzBsU/rTytO
+++Mu9f/WR524x/7bKeUyjz78lpO/0pvPuwXAu2F9lJM5xot2+SVkzqfTGLdSyjX2I9tz8zMXfvo0
+47jp0qfX8UiW386jTba5iAOo9uizwcdc3BmjoqIJq6urqKurAwA8++yzRptbjn0krxE/VldXEY3u
+wVtv3enDHHcz9UvR/Pw85ufnN9dJtp8GAO63vzY5PXL96QJgCMCAw/agfghuOd7h8w6fd/i8w98K
+CGpJB8CIn20Odd4NoMb+Pgbrdfs/71AvwGnZel1dyTXRh9RpfbK//6Kmrl+mruFXV1vrp3f6MNdm
+H8qzHClAH07lIPpMj7usLFrQPhsb9xS8TyCiiURdTm2i0Zixvyxr/USiLuPc8o4rvc/kGn7yPJue
+vprRZ3Nza1qd5Bp+stzc3Jq1vtPaeGPjnqzPfTNr+NnG3Uz9Uhdkwn/JYdurPto1w/qd+xUArwL4
+LZd6AU5LcSwsLOjw8LDrXcvy8rJOTEzo8vLyxra1tTVdWlrauOsw6/T09Gg8Hteenh5VVd25c6cC
+0J07d6qq6q5duxSA7tq1S1VVT58+rdXV1Xr69OmNMR577DEtKyvTxx57TFVVBwYGdPfu3TowMKCq
+qu3t7RqJRLS9vd1xjObmZhURbW5u3ugzGo0qAI1Go45xHj16VKPRqB49etQxhpmZGT1//rzOzMy4
+xm3GabY5fPiwlpeX6+HDhx3rT05O6smTJ3VyctK1z/379ysA3b9/v2PcQ0NDunfvXh0aGnKNc2xs
+TDs6OnRsbMyxjhm3WR4ZGdHW1lYdGRlx7E8189zq7e3V+vp67e3tdezDHMM8z5z6NOuYZa/6Tsxj
+4HWN+OFn3M3UL2X5JPysb7wSkT4A/xrAewH8ZcqudwFYVNV/nuMKkts4mi0OIiJKl88br7wSfg2s
+j0b+HQBPpez6f6r6d3lF6TwOEz4RUQ4KnvAdBtgJ6yUTAABV/Xoug2XplwmfiCgHgX20goj8ooh8
+DcBfAfgzAKsAPpNzhEREVDR+P1rhPwB4HMBXVfVBAMcAfDGwqIiIqOD8JvwfqerfAoiISERVrwP4
+pwHGRUREBeb3Xxz+XxHZDut19FMisgbgB8GFRUREheb38/DjAN6C9RvBr8N6D/mUfde/+SD4R1si
+opwE/iqdlIEiAJ5Q1SnPyv76Y8InIspBwV+lIyLVIvKbIvL7ItIlln5Yn370a5sJloiItpbXG68+
+Deuflv9vWK/M2QlAADypqq8ULAje4RMR5SSId9q+pqrN9vdlAN4AsFtV/35TkWaOw4RPRJSDIN54
+9aPkN6r6DoBvFjrZExHR1vC6w38Hd15+KbA+4viH9veqqtUFCYJ3+EREOcnnDj/r6/BVtWxzIRER
+Uanw+05bIiK6yzHhExGFBBM+EVFIMOETEYUEEz4RUUgw4RMRhQQTPhFRSDDhExGFBBM+EVFIMOET
+EYUEEz4RUUgw4RMRhQQTPhFRSDDhExGFRKAJX0QaROTzIvK6iLwmIheDHI+IiNwFfYf/jwAGVPV9
+AD4A4DdE5CcCHrMkrK+v48aNG1hfXwcALC4u4tKlS1hcXAQArKys4MqVK1hZWXFtY9aZmppCT08P
+pqamAACDg4NoamrC4OAgAODcuXO47777cO7cOQDA+Pg4jhw5gvHx8Y0xzDZmubu7G7FYDN3d3QCA
+4eFh7Nu3D8PDwwCA0dFRtLW1YXR0dKPPgwcPoqysDAcPHnRs4zXmqVOnsH37dpw6dco1bnP+zLIZ
+l1MfJrPO7OwsLly4gNnZWceyeTycxjCPkdmHyTzmXmM6bfPqIwhe56oT85hREajqlj0APA/gmMN2
+vZdMT1/VWCyhNTXtGosl9MCBVgViCjysQEwbG/fY5b0KxLS//2JGm+PHu9PqxOM1aX0AEaMsWcuJ
+RJ1GIlU5tcksp48Zj1crULbJPr3jvjMX1rba2p1Gm4qscSYSdRnHqLa2Pmsf0eg2Y8y6tONRURHP
+GKOh4cG0bWVllWnl5ubWrOdJQ8OejD7N86S//8m0bcePd2ftwxwziPPbPFf7+y9mtDGPYVdXd8Hj
+Chs7b+aWg3NtkO8DwB4AqwC2O+wLaEq23tramsZiCQVuKqD215gC1+3ydbucvr+ysjpl2zWjjlk2
++3Du886YNxWo8qjz0Tz6jNn9+m3jN+6JHOKe8BXn2NjYxjEaGxvzGcc1l/LTDvW94rTKMzMzLudJ
+IebbuY/kmMGc3+a5aY25vLy80WZhYcGxzsLCQsHiCqN8En7Wf3FYKCKyHcBzAJ5U1e871bl8+fLG
+952dnejs7NyK0ApudXUV0egevPVWi72lBcADAOJ2OQ6gwd6e3N8AkbdTtt026phlsw+nPlPHbAHw
+bgBVWeq8mEef7wHwDzm08Rv3LSPuyix93vIR5wN45pln0NfXBwB45plnfMZx26V806G+1/xa5eef
+fx4f/OAHHc4TP/P9AIDU88TffCbHLITMuM1z0zqfl5aWsH//fgDA3NycY1xzc3M4dOhQQeIKg/n5
+eczPz2+uk1x/QuT6gPV/c/8UVrJ3qxPMj8Ai4B0+7/B5h887/K2AUlzSAfBJAP/Ro04wM1IkyTXO
+6uo2jcUS2tycXMN/SIHUNXxrPTN1DT/Zpqsrfc3TWi+/08edtW5/5USiTsvKopvqwyxbMW2uDz9x
+35mLO9tSyyLlnn2YvPqIRmMuYz7suv/OcbW2mfPttoafPOZme3NMaw3/Ytq2rq7urH0EuYbvdq46
+reGbx5Br+JtXcgkfwCEA7wB4BcDLAF4CcMKhXnCzUiRra2u6tLSka2trqmrd5QwPD2/c1SwvL+vE
+xETanZDZxqwzOTmpJ0+e1MnJSVVVHRgY0N27d+vAwICqqp49e1YTiYSePXtWVa072Y6OjrS7W7ON
+WT5x4oRWVVXpiRMnVFV1aGhI9+7dq0NDQ6qqOjIyoq2trToyMrLRZ3t7u0YiEW1vb3ds4zVmT0+P
+xuNx7enpcY3bnD+zbMbl1IfJrDMzM6Pnz5/fuCM2y+bxcBrDPEZmHybzmHuN6bTNq48geJ2rTsxj
+RpuTT8IXq11xiYiWQhxERHcLEYGqSi5t+E5bIqKQYMInIgoJJnwiopBgwiciCgkmfCKikGDCJyIK
+CSZ8IqKQYMInIgoJJnwiopBgwiciCgkmfCKikGDCJyIKCSZ8IqKQYMInIgoJJnwiopBgwiciCgkm
+fCKikGDCJyIKCSZ8IqKQYMInIgoJJnwiopBgwiciCgkmfCKikGDCJyIKCSZ8IqKQYMInIgoJJnwi
+opBgwiciColAE76IfFxE3hSRV4Mch4iIvAV9h/8JAD8X8BhERORDoAlfVRcAfDfIMe4WKysruHLl
+ClZWVgAA6+vruHHjBtbX113rmOWpqSn09PRgamoKADA7O4sLFy5gdnYWALC4uIhLly5hcXHRsQwA
+fX192LVrF/r6+hz7HB0dRVtbG0ZHRwEA4+PjOHLkCMbHxx3LADA8PIx9+/ZheHjY8bmZYwwODqKp
+qQmDg4OOfZr1/cyfWTbnxmm+nbalyme/V1wm8xjl2j6fuAvVJldbMQZ5UNVAHwCaALzqUUfvZf39
+TyoQU2CvAjHt6urWWCyhNTXtGosldHr6akadAwfa0srxeI1dfliBmJaVVaaVt21L359I1KeVu7q6
+FYimbQMiRrnMoxwxxqjTiop4Rlypz622dqfRh3iU08dsbNyTMTfHj6fPX3//xbRyQ8ODGX2Y8z09
+fTVjW6p89pvb+vufzNrH8ePdaXEeONCa9XmZ7Z14xV2oNrnaijHCxs6bueXjXBvkPEDIE/7y8rJ9
+Ud9UQO2vMQWubZQrK6uNOtc8ysk+Jlz6nHCpX+Ww7bpdvm60McvJ+k+nlCMudZJ9esXtNsZ1o1zu
+I65kG7fnfifuqqodGosl0urEYgldW1tTVdW1tbW89ldV7cgaZ2ofCwsLPp/7dcf2TrziLlSbXG3F
+GGGUT8IvL87vFZkuX7688X1nZyc6OzuLFkshLS0tAWgE0GJvaQHwAIDbG2WRHQCqUurcBtCQpZzs
+45ZLn7cc6r8HwD849BG3y3GjjVlO1r+ZUi5zqZPs0ytutzHiRvkNj7gaUto4Pff0uMvKdgKIpdWp
+qGjC6uoq6urqsLq6imh0D956y//+SKQBwNtGnI2uY8zNzfl47g1p5dT2TrziLlSbXG3FGGEwPz+P
++fn5zXWS60+IXB8A9gB4zaNOMD8CSwDv8HmHzzt83uEHAaW2pANgGsC3YN36fB3Ah1zqBTYppaC/
+/6Ka6+mxWEKrq9tS1vDT6zQ3t6aV4/HkD4WH1Forj6aVzf2JRF1auaurW0XK07bdWT9PliM57U8k
+6jQajWXElfrczDgy+zTLZWllaw0/+/wl17qT5cbGPRl9mPOdXFNO3ZYqn/3mNjMusw/r7yp34mxu
+bs2pvROvuAvVJldbMUbYlFzC9x3EPZ7wVa07/YmJCV1eXlZV665naWkp7S7HrGOWJycn9eTJkzo5
+OamqqjMzM3r+/HmdmZlRVeuucXh4WBcWFhzLqqq9vb1aX1+vvb29jn2OjIxoa2urjoyMqKrq2NiY
+dnR06NjYmGNZVXVoaEj37t2rQ0NDjs/NHGNgYEB3796tAwMDjn2a9f3Mn1k258Zpvp22pcpnv1dc
+JvMY5do+n7gL1SZXWzFGmOST8MVqV1wioqUQBxHR3UJEoKqSSxt+tAIRUUgw4RMRhQQTPhFRSDDh
+ExGFBBM+EVFIMOETEYUEEz4RUUgw4RMRhQQTPhFRSDDhExGFBBM+EVFIMOETEYUEEz4RUUgw4RMR
+hQQTPhFRSDDhExGFBBM+EVFIMOETEYUEEz4RUUgw4RMRhQQTPhFRSDDhExGFBBM+EVFIMOETEYUE
+Ez4RUUgw4RMRhQQTPhFRSASe8EXkhIh8WUS+KiIfDno8IiJyFmjCF5EIgN8H8HMA3gfgCRH5iSDH
+DMr8/HyxQ/CFcRYW4ywsxllcQd/hPwrga6r616r6IwBXAfQEPGYg7pYTgHEWFuMsLMZZXEEn/AcA
+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
+iCgk/j+VX9ivq8/viwAAAABJRU5ErkJggg==
 "
 >
 </div>
@@ -2193,7 +2193,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># As we can see, lower ratings to Fantasy movies were mostly given by young users.</span>
@@ -2206,7 +2206,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Section 3: Classification and Prediction</span>
@@ -2224,7 +2224,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Generate user to movie_rating matrix.</span>
@@ -2240,7 +2240,7 @@ SUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2255,7 +2255,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ratings</span><span class="p">)):</span>
@@ -2272,7 +2272,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">UR</span><span class="p">[</span><span class="mi">195</span><span class="p">,</span> <span class="mi">241</span><span class="p">]</span>
@@ -2286,7 +2286,7 @@ SUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2301,7 +2301,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Occupation as the target</span>
@@ -2315,7 +2315,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">UR_target</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
@@ -2329,7 +2329,7 @@ SUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[27]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2346,7 +2346,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Split to 80% 20% train and test data sets</span>
@@ -2361,7 +2361,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">UR_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">UR_test</span><span class="o">.</span><span class="n">shape</span>
@@ -2392,7 +2392,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create our own KNN classifier. It allows input the training data matrix, the training labels, </span>
@@ -2430,7 +2430,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a function to compute the classification accuracy over the test data set</span>
@@ -4523,7 +4523,7 @@ y/8HXq6s+6S3MWsAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Let&#39;s first try to group movies into 5 clusters</span>
@@ -4537,7 +4537,7 @@ y/8HXq6s+6S3MWsAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">centroids5</span>
@@ -4551,30 +4551,30 @@ y/8HXq6s+6S3MWsAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[93]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[88]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.        ,  0.03554502,  0.00473934,  0.00473934,  0.06398104,
-         0.91469194,  0.02132701,  0.08767773,  0.16350711,  0.00947867,
-         0.        ,  0.01895735,  0.03554502,  0.02132701,  0.19668246,
-         0.01895735,  0.01895735,  0.02369668,  0.01184834],
-       [ 0.        ,  0.18811881,  0.0049505 ,  0.        ,  0.        ,
-         0.01485149,  0.15346535,  0.        ,  0.0049505 ,  0.        ,
-         0.08910891,  0.26732673,  0.01485149,  0.10891089,  0.20792079,
-         0.04950495,  0.56930693,  0.01485149,  0.        ],
-       [ 0.        ,  0.01388889,  0.58333333,  0.30555556,  0.76388889,
-         0.11111111,  0.        ,  0.        ,  0.06944444,  0.11111111,
-         0.        ,  0.        ,  0.22222222,  0.        ,  0.06944444,
-         0.04166667,  0.        ,  0.08333333,  0.        ],
-       [ 0.00198807,  0.06361829,  0.00596421,  0.        ,  0.01590457,
-         0.        ,  0.06759443,  0.00198807,  0.99801193,  0.00397614,
-         0.00397614,  0.00795229,  0.00994036,  0.01590457,  0.13121272,
-         0.01192843,  0.08747515,  0.05964215,  0.00994036],
-       [ 0.        ,  0.82876712,  0.40410959,  0.02054795,  0.02739726,
-         0.06849315,  0.0890411 ,  0.        ,  0.02054795,  0.01369863,
-         0.00684932,  0.07534247,  0.01369863,  0.02739726,  0.07534247,
-         0.40410959,  0.16438356,  0.05479452,  0.0890411 ]])</pre>
+<pre>array([[ 0.        ,  0.04835165,  0.01758242,  0.        ,  0.03296703,
+         0.        ,  0.06813187,  0.08131868,  0.92307692,  0.00659341,
+         0.0043956 ,  0.00879121,  0.01538462,  0.01758242,  0.        ,
+         0.01098901,  0.07912088,  0.05714286,  0.00659341],
+       [ 0.        ,  0.51916376,  0.29268293,  0.01393728,  0.09059233,
+         0.01045296,  0.12891986,  0.        ,  0.03832753,  0.03135889,
+         0.05923345,  0.07317073,  0.00348432,  0.1010453 ,  0.03135889,
+         0.22299652,  0.49825784,  0.03135889,  0.00696864],
+       [ 0.02325581,  0.03488372,  0.        ,  0.        ,  0.01162791,
+         0.8255814 ,  0.04651163,  0.        ,  0.8255814 ,  0.        ,
+         0.        ,  0.        ,  0.01162791,  0.01162791,  0.10465116,
+         0.        ,  0.01162791,  0.02325581,  0.15116279],
+       [ 0.        ,  0.05637982,  0.02373887,  0.02373887,  0.10385757,
+         1.        ,  0.02077151,  0.00296736,  0.        ,  0.01780415,
+         0.        ,  0.02077151,  0.04747774,  0.02373887,  0.21364985,
+         0.02077151,  0.02373887,  0.02967359,  0.01780415],
+       [ 0.        ,  0.05555556,  0.03333333,  0.12777778,  0.15      ,
+         0.        ,  0.02222222,  0.        ,  0.38333333,  0.01111111,
+         0.00555556,  0.19444444,  0.09444444,  0.01666667,  0.62777778,
+         0.00555556,  0.04444444,  0.08888889,  0.00555556]])</pre>
 </div>
 
 </div>
@@ -4585,7 +4585,7 @@ y/8HXq6s+6S3MWsAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">clusters5</span>
@@ -4599,17 +4599,17 @@ y/8HXq6s+6S3MWsAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[94]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[89]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[  3.00000000e+00,   3.44444898e-04],
-       [  0.00000000e+00,   4.19432896e-02],
-       [  0.00000000e+00,   3.25199677e-02],
+<pre>array([[ 2.        ,  0.07739337],
+       [ 1.        ,  0.16423579],
+       [ 3.        ,  0.02862056],
        ..., 
-       [  3.00000000e+00,   3.44444898e-04],
-       [  2.00000000e+00,   3.15660847e-01],
-       [  3.00000000e+00,   3.44444898e-04]])</pre>
+       [ 0.        ,  0.07745213],
+       [ 4.        ,  0.01154701],
+       [ 4.        ,  0.01154701]])</pre>
 </div>
 
 </div>
@@ -4620,7 +4620,7 @@ y/8HXq6s+6S3MWsAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="n">clusters</span><span class="p">,</span> <span class="n">movie_genres</span><span class="p">,</span> <span class="n">MG_id</span><span class="p">,</span> <span class="n">genres</span><span class="p">,</span> <span class="n">number_clusters</span><span class="p">):</span>
@@ -4651,7 +4651,7 @@ y/8HXq6s+6S3MWsAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">clusters5</span><span class="p">,</span> <span class="n">movie_genres</span><span class="p">,</span> <span class="n">MG_id_train</span><span class="p">,</span> <span class="n">genres</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -4668,39 +4668,39 @@ y/8HXq6s+6S3MWsAAAAASUVORK5CYII=
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Cluster 0:
-Cluster size: 422
+Cluster size: 455
 Top three genres:
-Comedy         	386		0.914692
-Romance        	83		0.196682
-Drama          	69		0.163507
+Drama          	420		0.923077
+Documentary    	37		0.081319
+Thriller       	36		0.079121
 ------------------------------------------------------
 Cluster 1:
-Cluster size: 202
+Cluster size: 287
 Top three genres:
-Thriller       	115		0.569307
-Horror         	54		0.267327
-Romance        	42		0.207921
+Action         	149		0.519164
+Thriller       	143		0.498258
+Adventure      	84		0.292683
 ------------------------------------------------------
 Cluster 2:
-Cluster size: 72
+Cluster size: 86
 Top three genres:
-Children&apos;s     	55		0.763889
-Adventure      	42		0.583333
-Animation      	22		0.305556
+Comedy         	71		0.825581
+Drama          	71		0.825581
+Western        	13		0.151163
 ------------------------------------------------------
 Cluster 3:
-Cluster size: 503
+Cluster size: 337
 Top three genres:
-Drama          	502		0.998012
-Romance        	66		0.131213
-Thriller       	44		0.087475
+Comedy         	337		1.000000
+Romance        	72		0.213650
+Children&apos;s     	35		0.103858
 ------------------------------------------------------
 Cluster 4:
-Cluster size: 146
+Cluster size: 180
 Top three genres:
-Action         	121		0.828767
-Sci-Fi         	59		0.404110
-Adventure      	59		0.404110
+Romance        	113		0.627778
+Drama          	69		0.383333
+Horror         	35		0.194444
 ------------------------------------------------------
 </pre>
 </div>
@@ -4712,7 +4712,7 @@ Adventure      	59		0.404110
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># As we can see from above results, when we group movies to 5 clusters,</span>
@@ -4726,7 +4726,7 @@ Adventure      	59		0.404110
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Let&#39;s try to group movies into 10 clusters</span>
@@ -4740,7 +4740,7 @@ Adventure      	59		0.404110
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">clusters10</span><span class="p">,</span> <span class="n">movie_genres</span><span class="p">,</span> <span class="n">MG_id_train</span><span class="p">,</span> <span class="n">genres</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -4757,74 +4757,74 @@ Adventure      	59		0.404110
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Cluster 0:
-Cluster size: 39
+Cluster size: 33
 Top three genres:
-Documentary    	38		0.974359
-unknown        	1		0.025641
-Drama          	1		0.025641
+Animation      	29		0.878788
+Children&apos;s     	28		0.848485
+Musical        	18		0.545455
 ------------------------------------------------------
 Cluster 1:
-Cluster size: 40
+Cluster size: 103
 Top three genres:
-Animation      	23		0.575000
-Children&apos;s     	22		0.550000
-Musical        	16		0.400000
+Thriller       	103		1.000000
+Drama          	37		0.359223
+Crime          	21		0.203883
 ------------------------------------------------------
 Cluster 2:
-Cluster size: 71
+Cluster size: 103
 Top three genres:
-Horror         	71		1.000000
-Thriller       	14		0.197183
-Sci-Fi         	9		0.126761
+Children&apos;s     	62		0.601942
+Adventure      	39		0.378641
+Documentary    	34		0.330097
 ------------------------------------------------------
 Cluster 3:
-Cluster size: 123
+Cluster size: 291
 Top three genres:
-Action         	115		0.934959
-Adventure      	54		0.439024
-Sci-Fi         	49		0.398374
+Comedy         	291		1.000000
+Romance        	70		0.240550
+Action         	16		0.054983
 ------------------------------------------------------
 Cluster 4:
-Cluster size: 427
+Cluster size: 152
 Top three genres:
-Drama          	427		1.000000
-Romance        	59		0.138173
-War            	29		0.067916
+Action         	139		0.914474
+Thriller       	66		0.434211
+Adventure      	51		0.335526
 ------------------------------------------------------
 Cluster 5:
-Cluster size: 57
+Cluster size: 52
 Top three genres:
-Romance        	54		0.947368
-Action         	18		0.315789
-Thriller       	13		0.228070
+War            	52		1.000000
+Drama          	35		0.673077
+Action         	13		0.250000
 ------------------------------------------------------
 Cluster 6:
-Cluster size: 77
+Cluster size: 42
 Top three genres:
-Crime          	72		0.935065
-Drama          	39		0.506494
-Thriller       	25		0.324675
+Crime          	25		0.595238
+Film-Noir      	14		0.333333
+Mystery        	13		0.309524
 ------------------------------------------------------
 Cluster 7:
-Cluster size: 111
+Cluster size: 99
 Top three genres:
-Thriller       	109		0.981982
-Drama          	36		0.324324
-Action         	34		0.306306
+Romance        	99		1.000000
+Drama          	71		0.717172
+Comedy         	9		0.090909
 ------------------------------------------------------
 Cluster 8:
-Cluster size: 43
+Cluster size: 405
 Top three genres:
-Adventure      	39		0.906977
-Children&apos;s     	36		0.837209
-Fantasy        	9		0.209302
+Drama          	405		1.000000
+Comedy         	58		0.143210
+Crime          	21		0.051852
 ------------------------------------------------------
 Cluster 9:
-Cluster size: 357
+Cluster size: 65
 Top three genres:
-Comedy         	357		1.000000
-Romance        	83		0.232493
-Drama          	65		0.182073
+Horror         	63		0.969231
+Thriller       	10		0.153846
+Comedy         	8		0.123077
 ------------------------------------------------------
 </pre>
 </div>
@@ -4836,7 +4836,7 @@ Drama          	65		0.182073
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># As we can see from above results, when we group movies to 10 clusters,</span>
@@ -4851,7 +4851,7 @@ Drama          	65		0.182073
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Try to categorize each of the movies in the 20% set-aside data into</span>
@@ -4868,7 +4868,7 @@ Drama          	65		0.182073
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">Cosine</span><span class="p">(</span><span class="n">vecA</span><span class="p">,</span> <span class="n">vecB</span><span class="p">):</span>
@@ -4882,10 +4882,10 @@ Drama          	65		0.182073
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s2">&quot;Assignment</span><span class="se">\t</span><span class="s2">Dist C0</span><span class="se">\t\t</span><span class="s2">Dist C1</span><span class="se">\t\t</span><span class="s2">Dist C2</span><span class="se">\t\t</span><span class="s2">Dist C3</span><span class="se">\t\t</span><span class="s2">Dist C4&quot;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s2">&quot;Assignment</span><span class="se">\t</span><span class="s2">Sim_C0</span><span class="se">\t\t</span><span class="s2">Sim_C1</span><span class="se">\t\t</span><span class="s2">Sim_C2</span><span class="se">\t\t</span><span class="s2">Sim_C3</span><span class="se">\t\t</span><span class="s2">Sim_C4&quot;</span>
 <span class="k">for</span> <span class="n">instance</span> <span class="ow">in</span> <span class="n">MG_test</span><span class="p">:</span>
     <span class="c1">#compute the similarity of each centroids</span>
     <span class="n">cos_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centroids5</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
@@ -4904,344 +4904,344 @@ Drama          	65		0.182073
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Assignment	Dist C0		Dist C1		Dist C2		Dist C3		Dist C4
-Cluster0	0.7008		0.0291		0.2237		0.0069		0.0560
-Cluster2	0.0667		0.0000		0.7251		0.0156		0.0264
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster3	0.1346		0.5627		0.0466		0.7548		0.1259
-Cluster4	0.0371		0.2773		0.3273		0.0779		0.7350
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster1	0.0222		0.1509		0.0000		0.0156		0.0264
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1346		0.5627		0.0466		0.7548		0.1259
-Cluster3	0.1853		0.0049		0.0466		0.6954		0.0140
-Cluster1	0.0297		0.6646		0.0000		0.0719		0.1306
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.7218		0.0146		0.5873		0.0111		0.0653
-Cluster4	0.0297		0.1552		0.0280		0.0194		0.2939
-Cluster4	0.0297		0.1892		0.4009		0.0484		0.8396
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster2	0.1486		0.2086		0.4382		0.0954		0.3265
-Cluster1	0.0243		0.6139		0.0000		0.0610		0.1104
-Cluster3	0.1346		0.5627		0.0466		0.7548		0.1259
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster4	0.0297		0.1892		0.4009		0.0484		0.8396
-Cluster3	0.1363		0.1552		0.0466		0.7410		0.0746
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.7218		0.0146		0.5873		0.0111		0.0653
-Cluster1	0.2051		0.2881		0.0659		0.1290		0.0726
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster1	0.0297		0.6646		0.0000		0.0719		0.1306
-Cluster2	0.0507		0.0000		0.7178		0.0111		0.0327
-Cluster4	0.0247		0.4322		0.4417		0.0518		0.4782
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster2	0.0593		0.1338		0.6988		0.0440		0.6135
-Cluster4	0.0371		0.2607		0.0132		0.0626		0.7982
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1241		0.0097		0.4382		0.6981		0.2892
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1346		0.5627		0.0466		0.7548		0.1259
-Cluster4	0.5104		0.1544		0.3757		0.0635		0.6530
-Cluster2	0.0628		0.0158		0.8601		0.0181		0.2475
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1227		0.5822		0.0381		0.6547		0.1523
-Cluster1	0.2089		0.6483		0.0659		0.6315		0.1682
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster2	0.0628		0.0119		0.7079		0.0147		0.0343
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1241		0.4713		0.0837		0.6502		0.1333
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster4	0.5079		0.3293		0.3362		0.0381		0.6629
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster0	0.6921		0.0291		0.1305		0.0415		0.0840
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.0198		0.3705		0.0000		0.0078		0.0726
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster2	0.0553		0.1197		0.7547		0.0393		0.5575
-Cluster4	0.0371		0.2607		0.0132		0.0626		0.7982
-Cluster0	0.6886		0.2765		0.0746		0.0055		0.0980
-Cluster3	0.1381		0.0194		0.1025		0.7355		0.0513
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster1	0.0222		0.2127		0.0000		0.0665		0.0858
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.5694		0.1347		0.1218		0.0406		0.0952
-Cluster2	0.0628		0.0119		0.7079		0.0147		0.0343
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster1	0.0257		0.2812		0.0000		0.0497		0.0686
-Cluster0	0.8197		0.2183		0.1212		0.0912		0.0980
-Cluster4	0.0734		0.1843		0.5221		0.0553		0.5830
-Cluster3	0.1853		0.0049		0.0466		0.6954		0.0140
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster4	0.0371		0.2607		0.0132		0.0626		0.7982
-Cluster1	0.0297		0.7083		0.0000		0.1078		0.1726
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster4	0.0357		0.6100		0.3273		0.0892		0.7769
-Cluster3	0.1261		0.5385		0.0791		0.5943		0.5145
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster4	0.0408		0.5626		0.3032		0.0831		0.8674
-Cluster3	0.1427		0.0040		0.5176		0.5779		0.0343
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster4	0.0124		0.0000		0.0000		0.0098		0.0858
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.0402		0.7422		0.0093		0.1051		0.6763
-Cluster4	0.0357		0.6100		0.3273		0.0892		0.7769
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster1	0.0297		0.6646		0.0000		0.0719		0.1306
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster1	0.0280		0.8198		0.0000		0.0664		0.1633
-Cluster1	0.2034		0.6688		0.0649		0.5701		0.4808
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster2	0.0507		0.0000		0.7178		0.0111		0.0327
-Cluster4	0.0315		0.0631		0.0839		0.0498		0.3125
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.0280		0.8198		0.0000		0.0664		0.1633
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1313		0.6100		0.0457		0.6524		0.5636
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster0	0.6886		0.2765		0.0746		0.0055		0.0980
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1327		0.2416		0.0457		0.6118		0.4875
-Cluster3	0.1468		0.0194		0.1958		0.7009		0.0233
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1363		0.1552		0.0466		0.7410		0.0746
-Cluster2	0.0507		0.0049		0.9043		0.0152		0.2939
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster0	0.5920		0.2504		0.0923		0.5552		0.4848
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster4	0.0371		0.2607		0.0132		0.0626		0.7982
-Cluster4	0.0371		0.2607		0.0132		0.0626		0.7982
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster2	0.0507		0.0049		0.9043		0.0152		0.2939
-Cluster2	0.0628		0.0119		0.7079		0.0147		0.0343
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster1	0.0222		0.2127		0.0000		0.0665		0.0858
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster1	0.1713		0.2183		0.1958		0.0982		0.0606
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster3	0.1346		0.2668		0.0466		0.6995		0.0653
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.0198		0.3705		0.0000		0.0078		0.0726
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster2	0.0247		0.0206		0.0791		0.0587		0.0528
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.7218		0.0146		0.5873		0.0111		0.0653
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster0	0.6903		0.1649		0.0746		0.0470		0.1073
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster4	0.0257		0.4991		0.3425		0.0598		0.5408
-Cluster0	0.6107		0.0238		0.6013		0.0147		0.0609
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster2	0.5922		0.0119		0.6470		0.0090		0.0647
-Cluster4	0.1887		0.2661		0.3337		0.5100		0.7029
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.8197		0.2183		0.1212		0.0912		0.0980
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.5794		0.1624		0.0685		0.0418		0.5484
-Cluster1	0.0402		0.7422		0.0093		0.1051		0.6763
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster4	0.1359		0.2881		0.3560		0.1281		0.6563
-Cluster1	0.0402		0.7422		0.0093		0.1051		0.6763
-Cluster4	0.0402		0.4463		0.0093		0.0498		0.6157
-Cluster3	0.1346		0.5627		0.0466		0.7548		0.1259
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster4	0.0371		0.2607		0.0132		0.0626		0.7982
-Cluster0	0.7677		0.1822		0.1370		0.6411		0.0914
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster0	0.0914		0.0000		0.0000		0.0020		0.0000
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.0342		0.7090		0.0228		0.0610		0.3580
-Cluster3	0.1341		0.1664		0.0913		0.6366		0.5027
-Cluster0	0.7677		0.1822		0.1370		0.6411		0.0914
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1363		0.1116		0.0466		0.7050		0.0327
-Cluster3	0.1678		0.0049		0.5594		0.7050		0.0327
-Cluster4	0.0314		0.1545		0.3273		0.0452		0.7350
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster1	0.0297		0.7083		0.0000		0.1078		0.1726
-Cluster3	0.1346		0.0534		0.0746		0.7023		0.2892
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1341		0.1664		0.0913		0.6366		0.5027
-Cluster4	0.0408		0.5626		0.3032		0.0831		0.8674
-Cluster3	0.1335		0.0377		0.4680		0.5064		0.2243
-Cluster0	0.6707		0.1664		0.1066		0.6028		0.5103
-Cluster1	0.0222		0.1509		0.0000		0.0156		0.0264
-Cluster2	0.0049		0.0069		0.5537		0.0059		0.3892
-Cluster4	0.0371		0.2607		0.0132		0.0626		0.7982
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.0222		0.2127		0.0000		0.0665		0.0858
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster0	0.6886		0.2765		0.0746		0.0055		0.0980
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster2	0.0371		0.0206		0.2109		0.0098		0.0132
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.1427		0.7090		0.0381		0.1332		0.1485
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.7218		0.0146		0.5873		0.0111		0.0653
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1363		0.1552		0.0466		0.7410		0.0746
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.0297		0.6646		0.0000		0.0719		0.1306
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster1	0.0321		0.6380		0.0000		0.0860		0.1385
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.6907		0.1901		0.2207		0.0801		0.0876
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.0222		0.2127		0.0000		0.0665		0.0858
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster1	0.0402		0.7422		0.0093		0.1051		0.6763
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.6921		0.0291		0.1305		0.0415		0.0840
-Cluster2	0.1569		0.1544		0.6460		0.0772		0.0660
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster2	0.0049		0.0000		0.2901		0.0000		0.0198
-Cluster3	0.1346		0.5627		0.0466		0.7548		0.1259
-Cluster2	0.0628		0.0119		0.7079		0.0147		0.0343
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.8197		0.2183		0.1212		0.0912		0.0980
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster2	0.0628		0.0119		0.7079		0.0147		0.0343
-Cluster0	0.8197		0.2183		0.1212		0.0912		0.0980
-Cluster2	0.0099		0.0000		0.1055		0.0039		0.0132
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster2	0.0507		0.0049		0.9043		0.0152		0.2939
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.1468		0.0194		0.1958		0.7009		0.0233
-Cluster1	0.2089		0.6483		0.0659		0.6315		0.1682
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster1	0.0420		0.7615		0.0000		0.0880		0.1715
-Cluster2	0.0247		0.0206		0.0791		0.0587		0.0528
-Cluster0	0.6781		0.0146		0.2797		0.0000		0.0606
-Cluster4	0.0402		0.2329		0.0373		0.0525		0.8396
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.5794		0.1624		0.0685		0.0418		0.5484
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster3	0.0000		0.0000		0.0000		0.0020		0.0000
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster0	0.7677		0.1822		0.1370		0.6411		0.0914
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster0	0.6807		0.6337		0.0990		0.1242		0.1714
-Cluster0	0.5651		0.4674		0.2284		0.0497		0.1409
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster4	0.0643		0.1681		0.6658		0.0479		0.8015
-Cluster1	0.0198		0.3705		0.0000		0.0078		0.0726
-Cluster1	0.0471		0.6179		0.0533		0.1196		0.5827
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1346		0.5627		0.0466		0.7548		0.1259
-Cluster1	0.2051		0.2881		0.0659		0.1290		0.0726
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster1	0.0297		0.7083		0.0000		0.1078		0.1726
-Cluster3	0.1241		0.2139		0.0381		0.6140		0.0762
-Cluster2	0.0507		0.0049		0.9043		0.0152		0.2939
-Cluster1	0.0280		0.6064		0.0280		0.0691		0.3871
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster0	0.7952		0.0194		0.1212		0.6940		0.0606
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster3	0.2656		0.2086		0.0932		0.7852		0.0653
-Cluster3	0.1363		0.1552		0.0466		0.7410		0.0746
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster1	0.0280		0.8198		0.0000		0.0664		0.1633
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster4	0.0175		0.0534		0.4195		0.0124		0.5504
-Cluster3	0.1468		0.1892		0.0559		0.7382		0.5784
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.2283		0.6258		0.0761		0.6908		0.1447
-Cluster1	0.2051		0.2881		0.0659		0.1290		0.0726
-Cluster2	0.0049		0.0069		0.5537		0.0059		0.3892
-Cluster1	0.0198		0.3705		0.0000		0.0078		0.0726
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.6781		0.0146		0.2797		0.0000		0.0606
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster0	0.8197		0.2183		0.1212		0.0912		0.0980
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster4	0.0357		0.6100		0.3273		0.0892		0.7769
-Cluster3	0.1363		0.1116		0.0466		0.7050		0.0327
-Cluster1	0.2051		0.2881		0.0659		0.1290		0.0726
-Cluster1	0.0198		0.7889		0.0000		0.0860		0.1583
-Cluster3	0.1468		0.0194		0.1958		0.7009		0.0233
-Cluster1	0.0297		0.6646		0.0000		0.0719		0.1306
-Cluster3	0.1705		0.0069		0.0659		0.9814		0.0198
-Cluster0	0.9540		0.0206		0.1055		0.0000		0.0660
-Cluster3	0.1678		0.0049		0.5594		0.7050		0.0327
-Cluster4	0.0442		0.6456		0.0304		0.0926		0.7769
-Cluster1	0.0402		0.7422		0.0093		0.1051		0.6763
+<pre>Assignment	Sim_C0		Sim_C1		Sim_C2		Sim_C3		Sim_C4
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0664		0.4823		0.0069		0.0305		0.2109
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0845		0.5947		0.0098		0.0230		0.0555
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0555		0.1993		0.0283		0.0249		0.0320
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0095		0.0312		0.4593		0.7049		0.5205
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0149		0.2500		0.0000		0.0284		0.1765
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0894		0.9029		0.0227		0.0581		0.0961
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0448		0.6264		0.0208		0.0528		0.0539
+Cluster3	0.0514		0.1176		0.5208		0.6988		0.0196
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0249		0.0853		0.5000		0.7557		0.1324
+Cluster1	0.0786		0.6003		0.0397		0.0547		0.0601
+Cluster1	0.0845		0.5947		0.0098		0.0230		0.0555
+Cluster4	0.0000		0.0374		0.0884		0.2068		0.7837
+Cluster4	0.0133		0.2735		0.0625		0.1625		0.5836
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0680		0.6088		0.0069		0.0305		0.0441
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster4	0.6109		0.1369		0.4763		0.1310		0.7448
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.7101		0.1176		0.5000		0.0163		0.3531
+Cluster3	0.0488		0.3722		0.4593		0.6916		0.4845
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0083		0.1970		0.4930		0.6988		0.0049
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0108		0.0984		0.4593		0.6916		0.4645
+Cluster1	0.0382		0.3235		0.0069		0.0873		0.1618
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0664		0.4823		0.0069		0.0305		0.2109
+Cluster0	0.7482		0.1412		0.5208		0.0142		0.3580
+Cluster4	0.0352		0.2391		0.0098		0.0962		0.2531
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster1	0.0382		0.3235		0.0069		0.0873		0.1618
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster3	0.0066		0.0706		0.4930		0.6988		0.1716
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.7482		0.1412		0.5208		0.0142		0.3580
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0630		0.4705		0.0069		0.0163		0.0441
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster4	0.0000		0.0374		0.0884		0.2068		0.7837
+Cluster0	0.7051		0.2206		0.4930		0.0142		0.3433
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster3	0.0095		0.0312		0.4593		0.7049		0.5205
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster1	0.0962		0.8587		0.0278		0.0548		0.0883
+Cluster1	0.0996		0.6707		0.0281		0.1020		0.2407
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0845		0.5947		0.0098		0.0230		0.0555
+Cluster1	0.0516		0.6197		0.0295		0.0546		0.0694
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0188		0.3494		0.0000		0.0230		0.0416
+Cluster1	0.0516		0.6197		0.0295		0.0546		0.0694
+Cluster2	0.5689		0.0552		0.8561		0.6784		0.7288
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0716		0.5677		0.3830		0.5329		0.0694
+Cluster1	0.0498		0.6852		0.0208		0.0548		0.0785
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster3	0.0365		0.4470		0.5139		0.7232		0.0490
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster0	0.7034		0.0941		0.4930		0.0142		0.5100
+Cluster0	0.6407		0.4730		0.4422		0.0431		0.3323
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.1206		0.7900		0.0454		0.0564		0.0881
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster2	0.5893		0.0960		0.8108		0.6170		0.3844
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster3	0.0116		0.0118		0.5000		0.7171		0.0834
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0498		0.6852		0.0208		0.0548		0.0785
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster1	0.0962		0.8587		0.0278		0.0548		0.0883
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0614		0.5147		0.0278		0.1097		0.1815
+Cluster1	0.0516		0.6197		0.0295		0.0546		0.0694
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0474		0.7132		0.0170		0.0564		0.0681
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0249		0.0853		0.5000		0.7557		0.1324
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0845		0.5947		0.0098		0.0230		0.0555
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0382		0.3235		0.0069		0.0873		0.1618
+Cluster1	0.0516		0.6197		0.0295		0.0546		0.0694
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0727		0.1539		0.0393		0.0201		0.0277
+Cluster4	0.0164		0.0042		0.0098		0.0460		0.1179
+Cluster1	0.0879		0.5470		0.0486		0.0528		0.0687
+Cluster3	0.0083		0.1970		0.4930		0.6988		0.0049
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster4	0.0249		0.0882		0.0069		0.0873		0.2452
+Cluster4	0.6177		0.3914		0.4593		0.1327		0.7608
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster0	0.7582		0.0323		0.4930		0.0020		0.3384
+Cluster1	0.0833		0.9150		0.0196		0.0603		0.0867
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.7399		0.0588		0.5069		0.0203		0.4168
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0853		0.8548		0.0227		0.0564		0.0761
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0083		0.1970		0.4930		0.6988		0.0049
+Cluster1	0.0117		0.2662		0.0000		0.0201		0.0069
+Cluster0	0.7482		0.1412		0.5208		0.0142		0.3580
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.7399		0.0588		0.5069		0.0203		0.4168
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0516		0.6197		0.0295		0.0546		0.0694
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.7217		0.1088		0.5000		0.0711		0.4708
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0596		0.4202		0.4139		0.5855		0.0440
+Cluster1	0.0730		0.5058		0.0139		0.0325		0.0539
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster4	0.0365		0.4647		0.0833		0.1849		0.6032
+Cluster3	0.0488		0.3602		0.4082		0.5855		0.1241
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster1	0.0640		0.5859		0.0615		0.1490		0.4528
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster1	0.0730		0.5058		0.0139		0.0325		0.0539
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0516		0.6197		0.0295		0.0546		0.0694
+Cluster1	0.0516		0.6197		0.0295		0.0546		0.0694
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster4	0.0596		0.4346		0.0624		0.1460		0.4965
+Cluster0	0.7084		0.0353		0.5000		0.0325		0.4218
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster4	0.6042		0.0696		0.4649		0.1360		0.7928
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0845		0.5947		0.0098		0.0230		0.0555
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster1	0.0716		0.5677		0.3830		0.5329		0.0694
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster3	0.0066		0.0706		0.4930		0.6988		0.1716
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster3	0.0133		0.2559		0.4930		0.7008		0.0294
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.1112		0.5294		0.0347		0.0305		0.0588
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster1	0.0149		0.2500		0.0000		0.0284		0.1765
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster1	0.0845		0.5947		0.0098		0.0230		0.0555
+Cluster4	0.0116		0.0294		0.0694		0.1788		0.6375
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster1	0.0582		0.5379		0.0057		0.0249		0.0400
+Cluster0	0.5197		0.2287		0.3535		0.0689		0.3433
+Cluster4	0.0298		0.0744		0.0113		0.0979		0.2683
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0066		0.0706		0.4930		0.6988		0.1716
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.7482		0.1412		0.5208		0.0142		0.3580
+Cluster4	0.0298		0.0744		0.0113		0.0979		0.2683
+Cluster4	0.0000		0.0374		0.0884		0.2068		0.7837
+Cluster3	0.0657		0.5095		0.3732		0.5372		0.1110
+Cluster1	0.0727		0.1539		0.0393		0.0201		0.0277
+Cluster1	0.0833		0.9150		0.0196		0.0603		0.0867
+Cluster1	0.0833		0.9150		0.0196		0.0603		0.0867
+Cluster1	0.0664		0.4823		0.0069		0.0305		0.2109
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0066		0.0706		0.4930		0.6988		0.1716
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0516		0.6197		0.0295		0.0546		0.0694
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0845		0.5947		0.0098		0.0230		0.0555
+Cluster0	0.7333		0.4705		0.5139		0.0386		0.3874
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0727		0.1539		0.0393		0.0201		0.0277
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.7333		0.4705		0.5139		0.0386		0.3874
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster1	0.0730		0.5058		0.0139		0.0325		0.0539
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster1	0.0474		0.7132		0.0170		0.0564		0.0681
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster1	0.0610		0.6219		0.0227		0.1028		0.1722
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0116		0.0118		0.5000		0.7171		0.0834
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0879		0.5470		0.0486		0.0528		0.0687
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster3	0.0514		0.1176		0.5208		0.6988		0.0196
+Cluster1	0.0399		0.5344		0.3634		0.5329		0.1769
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0845		0.5947		0.0098		0.0230		0.0555
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0664		0.4823		0.0069		0.0305		0.2109
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0664		0.4823		0.0069		0.0305		0.2109
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster1	0.0853		0.8548		0.0227		0.0564		0.0761
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster0	0.5838		0.2329		0.4763		0.0232		0.3043
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0498		0.6852		0.0208		0.0548		0.0785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.6177		0.2689		0.4252		0.0232		0.2963
+Cluster3	0.0244		0.0744		0.4819		0.6269		0.1121
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.1138		0.7228		0.0340		0.0614		0.1361
+Cluster3	0.0365		0.4470		0.5139		0.7232		0.0490
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster2	0.5798		0.2353		0.8051		0.5722		0.3003
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0273		0.2344		0.3162		0.5062		0.1799
+Cluster1	0.0664		0.4823		0.0069		0.0305		0.2109
+Cluster4	0.0164		0.0042		0.0098		0.0460		0.1179
+Cluster4	0.5713		0.4159		0.4174		0.1250		0.6727
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.7565		0.4529		0.5000		0.0163		0.3776
+Cluster2	0.6968		0.0412		0.9861		0.6846		0.3384
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0083		0.1970		0.4930		0.6988		0.0049
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0853		0.8548		0.0227		0.0564		0.0761
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster4	0.0094		0.0873		0.0000		0.0201		0.2427
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0894		0.7708		0.0283		0.0581		0.0841
+Cluster1	0.0879		0.5470		0.0486		0.0528		0.0687
+Cluster0	0.7101		0.2794		0.4930		0.0163		0.3678
+Cluster1	0.0935		0.4730		0.0283		0.0249		0.0521
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.7084		0.0353		0.5000		0.0325		0.4218
+Cluster0	0.7101		0.1176		0.5000		0.0163		0.3531
+Cluster4	0.6968		0.0588		0.5555		0.1463		0.8925
+Cluster3	0.0000		0.0125		0.6973		0.9681		0.0000
+Cluster1	0.0766		0.7068		0.3338		0.4985		0.1272
+Cluster3	0.0000		0.0353		0.5555		0.8308		0.5542
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster0	0.9854		0.0457		0.6973		0.0000		0.4785
+Cluster1	0.0845		0.5947		0.0098		0.0230		0.0555
+Cluster2	0.5689		0.0552		0.8561		0.6784		0.7288
+Cluster1	0.0786		0.7228		0.0737		0.1642		0.5245
+Cluster1	0.0657		0.5220		0.0687		0.1566		0.5028
+Cluster1	0.0927		0.4783		0.0295		0.0431		0.1734
+Cluster0	0.0868		0.0000		0.0000		0.0029		0.0000
+Cluster0	0.6407		0.4730		0.4422		0.0431		0.3323
+Cluster4	0.0164		0.0042		0.0098		0.0460		0.1179
+Cluster1	0.0382		0.3235		0.0069		0.0873		0.1618
+Cluster0	0.6218		0.1849		0.4309		0.0249		0.3043
 </pre>
 </div>
 </div>

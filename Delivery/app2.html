@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>CSC478_Project</title>
+<title>app2</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -173,10 +173,10 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># CSC478 Final Project Itembased app</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># CSC478 Final Project Itembased app</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">scipy</span> <span class="kn">as</span> <span class="nn">sp</span>
@@ -194,8 +194,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Load movieLens data</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;F:\Computer science\csc478\csc478 Final\movielens\Movielens-02&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load movieLens data</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;/Movielens&#39;</span>
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 <span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.user&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="s2">&quot;gender&quot;</span><span class="p">,</span><span class="s2">&quot;job&quot;</span><span class="p">,</span><span class="s2">&quot;zip code&quot;</span><span class="p">])</span>
 <span class="n">movies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;u.item&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="s2">&quot;rl_date&quot;</span><span class="p">,</span><span class="s2">&quot;vrl_date&quot;</span><span class="p">,</span><span class="s2">&quot;url&quot;</span><span class="p">,</span>
@@ -218,7 +218,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">npmovies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;u.item&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">npmovies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;u.item&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -231,7 +231,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">npmovies</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">npmovies</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
 </div>
@@ -260,7 +260,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">npuser</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;u.user&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">npuser</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;u.user&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -273,7 +273,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">npuser</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">npuser</span>
 </pre></div>
 
 </div>
@@ -309,7 +309,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#list1=ratelist(npratings,npmovies,npuser)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#list1=ratelist(npratings,npmovies,npuser)</span>
 </pre></div>
 
 </div>
@@ -322,7 +322,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">rating_mat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">)))</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">rating_mat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">)))</span>
 <span class="n">rating_mat</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
@@ -352,7 +352,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ratings</span><span class="p">)):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ratings</span><span class="p">)):</span>
     <span class="n">user</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">user</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="mi">1</span>
     <span class="n">movie</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">movie</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="mi">1</span>
     <span class="n">rating</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">rating</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
@@ -369,7 +369,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">rating_mat</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">rating_mat</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
 </div>
@@ -398,7 +398,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pylab</span> <span class="kn">as</span> <span class="nn">pl</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="nn">.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
@@ -416,7 +416,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">rating_mat</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">rating_mat</span>
 </pre></div>
 
 </div>
@@ -451,7 +451,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[172]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">npmovies</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">npmovies</span>
 </pre></div>
 
 </div>
@@ -488,7 +488,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[151]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">la</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
@@ -598,7 +598,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Mean absoloute for cosine simalarity</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Mean absoloute for cosine simalarity</span>
 </pre></div>
 
 </div>
@@ -611,7 +611,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[129]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">test</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">standEst</span><span class="p">,</span><span class="n">cosSim2</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">standEst</span><span class="p">,</span><span class="n">cosSim2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -645,7 +645,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#MAE for ecludSim</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#MAE for ecludSim</span>
 </pre></div>
 
 </div>
@@ -658,7 +658,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[131]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">test</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">standEst</span><span class="p">,</span><span class="n">ecludSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">standEst</span><span class="p">,</span><span class="n">ecludSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -692,7 +692,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#MAE for pearsSim</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#MAE for pearsSim</span>
 </pre></div>
 
 </div>
@@ -705,7 +705,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[150]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">test1</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">standEst</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test1</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">standEst</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -739,7 +739,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[168]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">rec_most_similar_movies</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">querymovie</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">rec_most_similar_movies</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">querymovie</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
     <span class="n">mv</span> <span class="o">=</span> <span class="n">get_mv_text</span><span class="p">(</span><span class="n">movie</span><span class="p">,</span> <span class="n">querymovie</span><span class="p">)</span>
     <span class="k">print</span> <span class="s1">&#39;Selected Movie: </span><span class="se">\n</span><span class="s1">&#39;</span>
     <span class="k">print</span> <span class="n">mv</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
@@ -764,7 +764,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[169]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Count Knn by pearsSim, then recommand the most sim n.</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Count Knn by pearsSim, then recommand the most sim n.</span>
 <span class="c1"># The sim is based on the movoe&#39;s rating</span>
 </pre></div>
 
@@ -778,7 +778,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[170]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">rec_most_similar_movies</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">rec_most_similar_movies</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -831,7 +831,7 @@ _______________
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">unratedMovies</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movies</span><span class="p">,</span><span class="n">datamat</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">unratedMovies</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="n">movies</span><span class="p">,</span><span class="n">datamat</span><span class="p">):</span>
     <span class="n">unrated</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">datamat</span><span class="p">[</span><span class="n">userId</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
@@ -849,7 +849,7 @@ _______________
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Predict all unrated movie for a user</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Predict all unrated movie for a user</span>
 <span class="c1"># predict based by that user &#39;s rating on most similiar movies</span>
 <span class="k">def</span> <span class="nf">PredictRateForUser</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
     <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
@@ -887,7 +887,7 @@ _______________
 <div class="prompt input_prompt">In&nbsp;[165]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> <span class="n">PredictRateForUser</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span> <span class="n">PredictRateForUser</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1055,7 +1055,7 @@ Predict rating for user # 1 movie: Operation Dumbo Drop (1995) is: 3
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># Predict all unrated movie for a user and a specific movie</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Predict all unrated movie for a user and a specific movie</span>
 <span class="k">def</span> <span class="nf">PredictRateForUserMovie</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span><span class="n">querymovie</span><span class="p">,</span><span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
     <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
     <span class="c1">#print &#39;Selected Movie: \n&#39;</span>
@@ -1090,7 +1090,7 @@ Predict rating for user # 1 movie: Operation Dumbo Drop (1995) is: 3
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">PredictRateForUserMovie</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">PredictRateForUserMovie</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1117,7 +1117,7 @@ Predict rating for user # 1 movie: Operation Dumbo Drop (1995) is: 3
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1"># PredictTest will predict rating for a rated movie of the user, and then compare the predict result with actual rating </span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># PredictTest will predict rating for a rated movie of the user, and then compare the predict result with actual rating </span>
 </pre></div>
 
 </div>
@@ -1130,7 +1130,7 @@ Predict rating for user # 1 movie: Operation Dumbo Drop (1995) is: 3
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">PredictTest</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">PredictTest</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
     <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
     <span class="c1">#print &#39;Selected Movie: \n&#39;</span>
     <span class="c1">#print mv[:5]</span>
@@ -1163,7 +1163,7 @@ Predict rating for user # 1 movie: Operation Dumbo Drop (1995) is: 3
 <div class="prompt input_prompt">In&nbsp;[286]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> <span class="n">PredictTest</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span> <span class="n">PredictTest</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1375,7 +1375,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#PredictTest2 will find the the accuracy by how close the predicted movie rating to the actual movie rating.</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#PredictTest2 will find the the accuracy by how close the predicted movie rating to the actual movie rating.</span>
 </pre></div>
 
 </div>
@@ -1388,7 +1388,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">PredictTest2</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">PredictTest2</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
     <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
     <span class="c1">#print &#39;Selected Movie: \n&#39;</span>
     <span class="c1">#print mv[:5]</span>
@@ -1424,7 +1424,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#accury using pearsSim</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#accury using pearsSim</span>
 </pre></div>
 
 </div>
@@ -1437,7 +1437,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[167]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">PredictTest2</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">PredictTest2</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1464,7 +1464,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#PRedictTest4 is modified edition of PredictTest2, it returns the accurcy for a single user instead of printing it out.</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#PRedictTest4 is modified edition of PredictTest2, it returns the accurcy for a single user instead of printing it out.</span>
 </pre></div>
 
 </div>
@@ -1477,7 +1477,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">PredictTest4</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">PredictTest4</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="n">userId</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">pearsSim</span><span class="p">):</span>
     <span class="c1">#mv = get_mv_text(movie, querymovie)</span>
     <span class="c1">#print &#39;Selected Movie: \n&#39;</span>
     <span class="c1">#print mv[:5]</span>
@@ -1513,7 +1513,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#find 20% of the total user data</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#find 20% of the total user data</span>
 </pre></div>
 
 </div>
@@ -1526,7 +1526,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[159]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="nb">len</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">)</span><span class="o">*</span><span class="mf">0.2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">)</span><span class="o">*</span><span class="mf">0.2</span>
 </pre></div>
 
 </div>
@@ -1555,7 +1555,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#So I would like to use 189 user as test data</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#So I would like to use 189 user as test data</span>
 </pre></div>
 
 </div>
@@ -1568,7 +1568,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#accury using ecludSim</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#accury using ecludSim</span>
 </pre></div>
 
 </div>
@@ -1581,7 +1581,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[162]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">k</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">190</span><span class="p">):</span>
     <span class="n">k</span><span class="o">+=</span><span class="n">PredictTest4</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">ecludSim</span><span class="p">)</span>
@@ -1613,7 +1613,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#accury using pearsSim</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#accury using pearsSim</span>
 </pre></div>
 
 </div>
@@ -1626,7 +1626,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[163]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">k</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">190</span><span class="p">):</span>
     <span class="n">k</span><span class="o">+=</span><span class="n">PredictTest4</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">pearsSim</span><span class="p">)</span>
@@ -1658,7 +1658,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c1">#accurcy using CosSim</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#accurcy using CosSim</span>
 </pre></div>
 
 </div>
@@ -1671,7 +1671,7 @@ Actual rating for user # 1 movie: As Good As It Gets (1997) is 5
 <div class="prompt input_prompt">In&nbsp;[164]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">k</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">190</span><span class="p">):</span>
     <span class="n">k</span><span class="o">+=</span><span class="n">PredictTest4</span><span class="p">(</span><span class="n">rating_mat</span><span class="p">,</span><span class="n">npmovies</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">cosSim2</span><span class="p">)</span>

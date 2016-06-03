@@ -88,7 +88,7 @@ def PredictRateForUserMovie(dataMat, movie, userId,querymovie,metric=pearsSim):
 if __name__ == "__main__":
     print "loading data..."
     if len(sys.argv) <= 1:
-        path = 'F:\Computer science\csc478\csc478 Final\movielens\Movielens-02'
+        path = os.getcwd()+"/Movielens"
     else:
         path = sys.argv[1]
     os.chdir(path)
